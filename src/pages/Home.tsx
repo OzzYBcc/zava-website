@@ -99,7 +99,7 @@ export default function Home() {
                 { step: '04', title: 'Launch', desc: 'Deployment, testing, and ongoing optimization' },
               ].map((item) => (
                 <div key={item.step} className="text-center">
-                  <div className="text-5xl font-bold text-border mb-4">{item.step}</div>
+                  <div className="text-5xl font-bold text-foreground/20 mb-4">{item.step}</div>
                   <h3 className="text-xl font-bold mb-3 text-foreground">{item.title}</h3>
                   <p className="text-muted-foreground">{item.desc}</p>
                 </div>
