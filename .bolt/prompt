@@ -1,5 +1,7 @@
-For all designs I ask you to make, have them be beautiful, not cookie cutter. Make webpages that are fully featured and worthy for production.
-
-By default, this template supports JSX syntax with Tailwind CSS classes, the shadcn/ui library, React hooks, and Lucide React for icons. Do not install other packages for UI themes, icons, etc unless absolutely necessary or I request them.
-
-Use icons from lucide-react for logos.
+For every future change:
+- All animations: soft fade-in + hover scale only
+- Full-bleed images for projects, safe mobile padding
+- Sticky navbar + scroll progress bar on EVERY page
+- Optimize tokens: never repeat instructions, reference exact file/class
+- Never install new packages, unless requested to
+- Always test mobile <320px and 95+ Lighthouse
