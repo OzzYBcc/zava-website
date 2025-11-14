@@ -28,14 +28,14 @@ export default function Contact() {
 
   if (submitted) {
     return (
-      <div className="w-full min-h-screen flex items-center justify-center bg-white">
+      <div className="w-full min-h-screen flex items-center justify-center bg-black">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Thank You!</h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Thank You!</h1>
+            <p className="text-xl text-gray-400 mb-8">
               We've received your enquiry and will be in touch within 24 hours.
             </p>
-            <Button onClick={() => window.location.href = '/'} className="bg-black hover:bg-gray-800">
+            <Button onClick={() => window.location.href = '/'} className="bg-white text-black hover:bg-gray-200">
               Return to Home
             </Button>
           </div>
@@ -46,14 +46,14 @@ export default function Contact() {
 
   return (
     <div className="w-full">
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-black">
         <div className="container mx-auto px-4 lg:px-8">
           <FadeInSection>
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                 Let's Build Something Great
               </h1>
-              <p className="text-lg md:text-xl text-gray-600">
+              <p className="text-lg md:text-xl text-gray-400">
                 Tell us about your project and we'll get back to you within 24 hours
               </p>
             </div>
@@ -61,47 +61,47 @@ export default function Contact() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
             <FadeInSection>
-              <Card>
+              <Card className="bg-gray-900 border-gray-800">
                 <CardHeader className="text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-black text-white rounded-full mb-4 mx-auto">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-white text-black rounded-full mb-4 mx-auto">
                     <Mail size={24} />
                   </div>
-                  <CardTitle>Email</CardTitle>
-                  <CardDescription>info@zavabuild.com</CardDescription>
+                  <CardTitle className="text-white">Email</CardTitle>
+                  <CardDescription className="text-gray-400">info@zavabuild.com</CardDescription>
                 </CardHeader>
               </Card>
             </FadeInSection>
 
             <FadeInSection>
-              <Card>
+              <Card className="bg-gray-900 border-gray-800">
                 <CardHeader className="text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-black text-white rounded-full mb-4 mx-auto">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-white text-black rounded-full mb-4 mx-auto">
                     <Phone size={24} />
                   </div>
-                  <CardTitle>Phone</CardTitle>
-                  <CardDescription>+44 20 1234 5678</CardDescription>
+                  <CardTitle className="text-white">Phone</CardTitle>
+                  <CardDescription className="text-gray-400">+44 20 1234 5678</CardDescription>
                 </CardHeader>
               </Card>
             </FadeInSection>
 
             <FadeInSection>
-              <Card>
+              <Card className="bg-gray-900 border-gray-800">
                 <CardHeader className="text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-black text-white rounded-full mb-4 mx-auto">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-white text-black rounded-full mb-4 mx-auto">
                     <MapPin size={24} />
                   </div>
-                  <CardTitle>Location</CardTitle>
-                  <CardDescription>London, United Kingdom</CardDescription>
+                  <CardTitle className="text-white">Location</CardTitle>
+                  <CardDescription className="text-gray-400">London, United Kingdom</CardDescription>
                 </CardHeader>
               </Card>
             </FadeInSection>
           </div>
 
           <FadeInSection>
-            <Card className="max-w-4xl mx-auto">
+            <Card className="max-w-4xl mx-auto bg-gray-900 border-gray-800">
               <CardHeader>
-                <CardTitle className="text-2xl">Discovery Questionnaire</CardTitle>
-                <CardDescription>Help us understand your project requirements</CardDescription>
+                <CardTitle className="text-2xl text-white">Discovery Questionnaire</CardTitle>
+                <CardDescription className="text-gray-400">Help us understand your project requirements</CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -237,7 +237,7 @@ export default function Contact() {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full bg-black hover:bg-gray-800 text-lg py-6">
+                  <Button type="submit" className="w-full bg-white text-black hover:bg-gray-200 text-lg py-6">
                     Submit Enquiry
                   </Button>
                 </form>

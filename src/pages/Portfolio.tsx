@@ -50,14 +50,14 @@ const projects = [
 export default function Portfolio() {
   return (
     <div className="w-full">
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-black">
         <div className="container mx-auto px-4 lg:px-8">
           <FadeInSection>
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                 Our Work
               </h1>
-              <p className="text-lg md:text-xl text-gray-600">
+              <p className="text-lg md:text-xl text-gray-400">
                 Real projects. Real results. See how we've helped businesses transform their digital presence.
               </p>
             </div>
@@ -66,7 +66,7 @@ export default function Portfolio() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
               <FadeInSection key={project.title}>
-                <Card className="overflow-hidden group cursor-pointer h-full transition-transform duration-300 hover:scale-[1.02]">
+                <Card className="overflow-hidden group cursor-pointer h-full transition-transform duration-300 hover:scale-[1.02] bg-gray-900 border-gray-800">
                   <div className="relative overflow-hidden">
                     <img
                       src={project.image}
@@ -75,12 +75,12 @@ export default function Portfolio() {
                       loading="lazy"
                     />
                     <div className="absolute top-4 right-4">
-                      <Badge className="bg-white text-black">{project.category}</Badge>
+                      <Badge className="bg-black text-white">{project.category}</Badge>
                     </div>
                   </div>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-gray-600 mb-4">{project.outcome}</p>
+                    <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
+                    <p className="text-gray-400 mb-4">{project.outcome}</p>
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
                         <Badge key={tag} variant="outline" className="text-xs">
@@ -96,10 +96,10 @@ export default function Portfolio() {
 
           <FadeInSection>
             <div className="mt-16 text-center">
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-400 mb-6">
                 These are just a few examples. We've helped dozens of businesses achieve their digital goals.
               </p>
-              <p className="text-lg font-semibold">
+              <p className="text-lg font-semibold text-white">
                 Ready to join our success stories?
               </p>
             </div>
