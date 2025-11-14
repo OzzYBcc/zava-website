@@ -71,14 +71,14 @@ const services = [
 export default function Services() {
   return (
     <div className="w-full">
-      <section className="py-24 bg-black">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <FadeInSection>
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 Our Services
               </h1>
-              <p className="text-lg md:text-xl text-gray-400">
+              <p className="text-lg md:text-xl text-gray-600">
                 Choose the perfect package for your business needs. All packages include mobile-first design, ongoing support, and a satisfaction guarantee.
               </p>
             </div>
@@ -87,15 +87,15 @@ export default function Services() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
             {services.map((service) => (
               <FadeInSection key={service.name}>
-                <Card className="h-full hover:shadow-xl transition-shadow duration-300 bg-gray-900 border-gray-800">
+                <Card className="h-full hover:shadow-xl transition-shadow duration-300">
                   <CardHeader>
                     <div className="flex justify-between items-start mb-2">
-                      <CardTitle className="text-2xl md:text-3xl text-white">{service.name}</CardTitle>
+                      <CardTitle className="text-2xl md:text-3xl">{service.name}</CardTitle>
                       <div className="text-right">
-                        <div className="text-3xl font-bold text-white">{service.price}</div>
+                        <div className="text-3xl font-bold">{service.price}</div>
                       </div>
                     </div>
-                    <CardDescription className="text-base text-gray-400">{service.description}</CardDescription>
+                    <CardDescription className="text-base">{service.description}</CardDescription>
                     <div className="pt-2">
                       <Badge variant="secondary" className="text-xs">
                         Ideal for: {service.idealFor}
@@ -106,13 +106,13 @@ export default function Services() {
                     <ul className="space-y-3 mb-6">
                       {service.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-3">
-                          <Check className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-300">{feature}</span>
+                          <Check className="h-5 w-5 text-black flex-shrink-0 mt-0.5" />
+                          <span className="text-gray-700">{feature}</span>
                         </li>
                       ))}
                     </ul>
                     <Button
-                      className="w-full bg-white text-black hover:bg-gray-200"
+                      className="w-full bg-black hover:bg-gray-800"
                       onClick={() => {
                         const event = new CustomEvent('openQuestionnaire');
                         window.dispatchEvent(event);
@@ -127,15 +127,14 @@ export default function Services() {
           </div>
 
           <FadeInSection>
-            <div className="mt-16 bg-gray-950 rounded-lg p-8 md:p-12 text-center max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Need Something Different?</h2>
-              <p className="text-gray-400 mb-6">
+            <div className="mt-16 bg-gray-50 rounded-lg p-8 md:p-12 text-center max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Need Something Different?</h2>
+              <p className="text-gray-600 mb-6">
                 Every business is unique. If you need a custom solution, we'd love to discuss your specific requirements and create a tailored package.
               </p>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-gray-700 text-white hover:bg-gray-800"
                 onClick={() => {
                   const event = new CustomEvent('openQuestionnaire');
                   window.dispatchEvent(event);
