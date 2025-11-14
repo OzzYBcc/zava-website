@@ -28,14 +28,14 @@ export default function Contact() {
 
   if (submitted) {
     return (
-      <div className="w-full min-h-screen flex items-center justify-center bg-white">
+      <div className="w-full min-h-screen flex items-center justify-center bg-background transition-colors duration-300">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Thank You!</h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Thank You!</h1>
+            <p className="text-xl text-muted-foreground mb-8">
               We've received your enquiry and will be in touch within 24 hours.
             </p>
-            <Button onClick={() => window.location.href = '/'} className="bg-black hover:bg-gray-800">
+            <Button onClick={() => window.location.href = '/'} className="bg-primary text-primary-foreground hover:opacity-90">
               Return to Home
             </Button>
           </div>
@@ -46,14 +46,14 @@ export default function Contact() {
 
   return (
     <div className="w-full">
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-background transition-colors duration-300">
         <div className="container mx-auto px-4 lg:px-8">
           <FadeInSection>
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
                 Let's Build Something Great
               </h1>
-              <p className="text-lg md:text-xl text-gray-600">
+              <p className="text-lg md:text-xl text-muted-foreground">
                 Tell us about your project and we'll get back to you within 24 hours
               </p>
             </div>
@@ -63,7 +63,7 @@ export default function Contact() {
             <FadeInSection>
               <Card>
                 <CardHeader className="text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-black text-white rounded-full mb-4 mx-auto">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-primary text-primary-foreground rounded-full mb-4 mx-auto">
                     <Mail size={24} />
                   </div>
                   <CardTitle>Email</CardTitle>
@@ -75,7 +75,7 @@ export default function Contact() {
             <FadeInSection>
               <Card>
                 <CardHeader className="text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-black text-white rounded-full mb-4 mx-auto">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-primary text-primary-foreground rounded-full mb-4 mx-auto">
                     <Phone size={24} />
                   </div>
                   <CardTitle>Phone</CardTitle>
@@ -87,7 +87,7 @@ export default function Contact() {
             <FadeInSection>
               <Card>
                 <CardHeader className="text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-black text-white rounded-full mb-4 mx-auto">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-primary text-primary-foreground rounded-full mb-4 mx-auto">
                     <MapPin size={24} />
                   </div>
                   <CardTitle>Location</CardTitle>
@@ -211,7 +211,7 @@ export default function Contact() {
                       value={budget}
                       onValueChange={setBudget}
                     />
-                    <div className="flex justify-between text-xs text-gray-500">
+                    <div className="flex justify-between text-xs text-muted-foreground">
                       <span>£1,500</span>
                       <span>£15,000+</span>
                     </div>
@@ -237,7 +237,7 @@ export default function Contact() {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full bg-black hover:bg-gray-800 text-lg py-6">
+                  <Button type="submit" className="w-full bg-primary text-primary-foreground hover:opacity-90 text-lg py-6">
                     Submit Enquiry
                   </Button>
                 </form>

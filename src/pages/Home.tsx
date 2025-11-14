@@ -33,44 +33,44 @@ export default function Home() {
       </section>
 
       <FadeInSection>
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-background transition-colors duration-300">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
                 Why Choose ZAVA
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-muted-foreground">
                 We create digital experiences that drive measurable business results
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center p-8">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-black text-white rounded-full mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary text-primary-foreground rounded-full mb-6">
                   <Zap size={32} />
                 </div>
-                <h3 className="text-xl font-bold mb-4">Lightning Fast</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold mb-4 text-foreground">Lightning Fast</h3>
+                <p className="text-muted-foreground">
                   Optimized for performance with 95+ Lighthouse scores. Your site loads instantly.
                 </p>
               </div>
 
               <div className="text-center p-8">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-black text-white rounded-full mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary text-primary-foreground rounded-full mb-6">
                   <Shield size={32} />
                 </div>
-                <h3 className="text-xl font-bold mb-4">Enterprise Security</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold mb-4 text-foreground">Enterprise Security</h3>
+                <p className="text-muted-foreground">
                   Built with best practices and security standards that protect your business.
                 </p>
               </div>
 
               <div className="text-center p-8">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-black text-white rounded-full mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary text-primary-foreground rounded-full mb-6">
                   <TrendingUp size={32} />
                 </div>
-                <h3 className="text-xl font-bold mb-4">Growth Focused</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold mb-4 text-foreground">Growth Focused</h3>
+                <p className="text-muted-foreground">
                   Every design decision is made to maximize conversions and user engagement.
                 </p>
               </div>
@@ -80,13 +80,13 @@ export default function Home() {
       </FadeInSection>
 
       <FadeInSection>
-        <section className="py-24 bg-gray-50">
+        <section className="py-24 bg-secondary transition-colors duration-300">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
                 Our Process
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-muted-foreground">
                 A proven approach to delivering exceptional digital products
               </p>
             </div>
@@ -99,9 +99,9 @@ export default function Home() {
                 { step: '04', title: 'Launch', desc: 'Deployment, testing, and ongoing optimization' },
               ].map((item) => (
                 <div key={item.step} className="text-center">
-                  <div className="text-5xl font-bold text-gray-200 mb-4">{item.step}</div>
-                  <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                  <p className="text-gray-600">{item.desc}</p>
+                  <div className="text-5xl font-bold text-border mb-4">{item.step}</div>
+                  <h3 className="text-xl font-bold mb-3 text-foreground">{item.title}</h3>
+                  <p className="text-muted-foreground">{item.desc}</p>
                 </div>
               ))}
             </div>

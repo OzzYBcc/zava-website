@@ -71,14 +71,14 @@ const services = [
 export default function Services() {
   return (
     <div className="w-full">
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-background transition-colors duration-300">
         <div className="container mx-auto px-4 lg:px-8">
           <FadeInSection>
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
                 Our Services
               </h1>
-              <p className="text-lg md:text-xl text-gray-600">
+              <p className="text-lg md:text-xl text-muted-foreground">
                 Choose the perfect package for your business needs. All packages include mobile-first design, ongoing support, and a satisfaction guarantee.
               </p>
             </div>
@@ -106,13 +106,13 @@ export default function Services() {
                     <ul className="space-y-3 mb-6">
                       {service.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-3">
-                          <Check className="h-5 w-5 text-black flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-700">{feature}</span>
+                          <Check className="h-5 w-5 text-foreground flex-shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">{feature}</span>
                         </li>
                       ))}
                     </ul>
                     <Button
-                      className="w-full bg-black hover:bg-gray-800"
+                      className="w-full bg-primary text-primary-foreground hover:opacity-90"
                       onClick={() => {
                         const event = new CustomEvent('openQuestionnaire');
                         window.dispatchEvent(event);
@@ -127,9 +127,9 @@ export default function Services() {
           </div>
 
           <FadeInSection>
-            <div className="mt-16 bg-gray-50 rounded-lg p-8 md:p-12 text-center max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">Need Something Different?</h2>
-              <p className="text-gray-600 mb-6">
+            <div className="mt-16 bg-secondary rounded-lg p-8 md:p-12 text-center max-w-4xl mx-auto transition-colors duration-300">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">Need Something Different?</h2>
+              <p className="text-muted-foreground mb-6">
                 Every business is unique. If you need a custom solution, we'd love to discuss your specific requirements and create a tailored package.
               </p>
               <Button
