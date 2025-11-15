@@ -8,7 +8,6 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import QuestionnaireModal from './components/QuestionnaireModal';
 import PageTitle from './components/PageTitle';
-import MetaTags from './components/MetaTags';
 import { Toaster } from './components/ui/toaster';
 
 function App() {
@@ -26,7 +25,6 @@ function App() {
   return (
     <Router>
       <PageTitle />
-      <MetaTags />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
