@@ -7,7 +7,7 @@ interface PageMetaData {
   url: string;
 }
 
-const OG_IMAGE = '/Zava OG Template.jpg';
+const OG_IMAGE = 'https://zavabuild.com/Zava OG Template.jpg';
 
 const pageMetaData: Record<string, PageMetaData> = {
   '/': {
