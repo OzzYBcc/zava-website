@@ -4,20 +4,27 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo3-light.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>Zava - Premium Websites & Web Apps for Ambitious Businesses</title>
     <meta name="description" content="Digital assets that position your brand to lead. We create premium websites and web apps that drive measurable business results." />
 
+    <!-- Open Graph -->
     <meta property="og:title" content="Zava - Premium Websites & Web Apps for Ambitious Businesses" />
     <meta property="og:description" content="Digital assets that position your brand to lead. We create premium websites and web apps that drive measurable business results." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://zavabuild.com" />
+    <meta property="og:image" content="/og.png" /> <!-- Transparent image -->
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Zava - Premium Websites & Web Apps for Ambitious Businesses" />
     <meta name="twitter:description" content="Digital assets that position your brand to lead. We create premium websites and web apps that drive measurable business results." />
+    <meta name="twitter:image" content="/og.png" />
+
     <script>
       (function() {
-        const theme = localStorage.getItem('theme') ||
+        const theme =
+          localStorage.getItem('theme') ||
           (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         document.documentElement.classList.add(theme);
       })();
