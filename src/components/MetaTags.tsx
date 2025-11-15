@@ -4,39 +4,35 @@ import { useLocation } from 'react-router-dom';
 interface PageMetaData {
   title: string;
   description: string;
-  image: string;
   url: string;
 }
+
+const OG_IMAGE = '/Zava OG Template.jpg';
 
 const pageMetaData: Record<string, PageMetaData> = {
   '/': {
     title: 'Zava - Premium Web Development & Design Agency',
     description: 'Transform your digital presence with stunning websites and applications. Expert development, modern design, and seamless user experiences.',
-    image: '/og-home.jpg',
     url: 'https://zavabuild.com'
   },
   '/about': {
     title: 'About Zava - Our Story & Mission',
     description: 'Learn about our passionate team of developers and designers dedicated to creating exceptional digital experiences for forward-thinking businesses.',
-    image: '/og-about.jpg',
     url: 'https://zavabuild.com/about'
   },
   '/services': {
     title: 'Our Services - Web Development & Design Solutions',
     description: 'Comprehensive web development services including custom websites, web applications, e-commerce solutions, and digital transformation consulting.',
-    image: '/og-services.jpg',
     url: 'https://zavabuild.com/services'
   },
   '/portfolio': {
     title: 'Portfolio - Our Best Work & Projects',
     description: 'Explore our portfolio of successful projects and see how we\'ve helped businesses achieve their digital goals with innovative solutions.',
-    image: '/og-portfolio.jpg',
     url: 'https://zavabuild.com/portfolio'
   },
   '/contact': {
     title: 'Contact Zava - Let\'s Build Something Amazing',
     description: 'Ready to start your project? Get in touch with our team to discuss how we can help bring your vision to life.',
-    image: '/og-contact.jpg',
     url: 'https://zavabuild.com/contact'
   }
 };
@@ -49,14 +45,14 @@ export default function MetaTags() {
 
     updateMetaTag('og:title', metaData.title);
     updateMetaTag('og:description', metaData.description);
-    updateMetaTag('og:image', metaData.image);
+    updateMetaTag('og:image', OG_IMAGE);
     updateMetaTag('og:url', metaData.url);
     updateMetaTag('og:type', 'website');
 
     updateMetaTag('twitter:card', 'summary_large_image');
     updateMetaTag('twitter:title', metaData.title);
     updateMetaTag('twitter:description', metaData.description);
-    updateMetaTag('twitter:image', metaData.image);
+    updateMetaTag('twitter:image', OG_IMAGE);
 
     updateMetaTag('description', metaData.description, 'name');
   }, [location]);
