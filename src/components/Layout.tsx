@@ -27,6 +27,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setMobileMenuOpen(false);
+    if (location.pathname !== '/') {
+      window.scrollTo(0, 0);
+    }
   }, [location.pathname]);
 
   const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
