@@ -11,8 +11,10 @@ import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { Textarea } from './ui/textarea';
 import { RadioGroup, RadioGroupItem } from './ui/radio-group';
+import { Checkbox } from './ui/checkbox';
 import { Slider } from './ui/slider';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/lib/supabase';
 
 interface QuestionnaireModalProps {
   open: boolean;
@@ -26,6 +28,38 @@ export default function QuestionnaireModal({ open, onOpenChange }: Questionnaire
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+
+    const data = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      company: formData.get('company') as string || null,
+      phone: formData.get('phone') as string || null,
+      project_type: formData.get('projectType') as string,
+      description: formData.get('description') as string,
+      branding: formData.get('branding') as string,
+      timeline: formData.get('timeline') as string,
+      budget: budget[0],
+      competitors: formData.get('competitors') as string || null,
+      website_references: formData.get('references') as string || null,
+      additional: formData.get('additional') as string || null,
+      requires_maintenance: formData.get('maintenance') === 'on',
+      requires_seo: formData.get('seo') === 'on',
+      communication_preference: formData.get('communication') as string,
+    };
+
+    const { error } = await supabase
+      .from('form_submissions')
+      .insert([data]);
+
+    if (error) {
+      toast({
+        title: 'Error',
+        description: 'Failed to submit form. Please try again.',
+        variant: 'destructive',
+      });
+      return;
+    }
 
     toast({
       title: 'Thank you!',
@@ -191,6 +225,40 @@ export default function QuestionnaireModal({ open, onOpenChange }: Questionnaire
               placeholder="Anything else you'd like us to know?"
               rows={3}
             />
+          </div>
+
+          <div className="space-y-3">
+            <Label>Additional Services</Label>
+            <div className="flex items-center space-x-2">
+              <Checkbox id="maintenance" name="maintenance" />
+              <Label htmlFor="maintenance" className="font-normal">I require ongoing maintenance</Label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Checkbox id="seo" name="seo" />
+              <Label htmlFor="seo" className="font-normal">I require SEO services</Label>
+            </div>
+          </div>
+
+          <div className="space-y-3">
+            <Label>Preferred Method of Communication *</Label>
+            <RadioGroup name="communication" required>
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="email" id="comm-email" />
+                <Label htmlFor="comm-email" className="font-normal">Email</Label>
+              </div>
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="phone" id="comm-phone" />
+                <Label htmlFor="comm-phone" className="font-normal">Phone</Label>
+              </div>
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="whatsapp" id="comm-whatsapp" />
+                <Label htmlFor="comm-whatsapp" className="font-normal">WhatsApp</Label>
+              </div>
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="any" id="comm-any" />
+                <Label htmlFor="comm-any" className="font-normal">Any method</Label>
+              </div>
+            </RadioGroup>
           </div>
 
           <div className="flex gap-3 pt-4">
