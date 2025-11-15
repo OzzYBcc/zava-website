@@ -5,6 +5,7 @@ import { Button } from './ui/button';
 import NewsletterSignup from './NewsletterSignup';
 import QuestionnaireModal from './QuestionnaireModal';
 import ThemeToggle from './ThemeToggle';
+import SEOHelmet from './SEOHelmet';
 import { useTheme } from '../hooks/useTheme';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -40,6 +41,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <>
+      <SEOHelmet />
       <header className="sticky top-0 z-50 bg-background border-b border-border transition-colors duration-300">
         <nav className="container mx-auto px-4 lg:px-8 h-16 flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold text-foreground transition-colors duration-300">
