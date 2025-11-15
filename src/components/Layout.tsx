@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 import NewsletterSignup from './NewsletterSignup';
@@ -12,6 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [questionnaireOpen, setQuestionnaireOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -30,6 +31,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate('/');
+    }
+  };
+
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About' },
@@ -42,7 +52,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <header className="sticky top-0 z-50 bg-background border-b border-border transition-colors duration-300">
         <nav className="container mx-auto px-4 lg:px-8 h-16 flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold text-foreground transition-colors duration-300">
+          <Link to="/" onClick={handleLogoClick} className="text-2xl font-bold text-foreground transition-colors duration-300">
             ZAVA
           </Link>
 

@@ -265,7 +265,7 @@ export default function QuestionnaireModal({ open, onOpenChange }: Questionnaire
             <Button type="button" variant="outline" onClick={() => onOpenChange(false)} className="flex-1">
               Cancel
             </Button>
-            <Button type="submit" className="flex-1 bg-black hover:bg-gray-800">
+            <Button type="submit" className="flex-1 bg-white text-black hover:bg-gray-200 dark:bg-white dark:text-black dark:hover:bg-gray-200">
               Submit Enquiry
             </Button>
           </div>
