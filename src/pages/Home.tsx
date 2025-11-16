@@ -230,7 +230,7 @@ export default function Home() {
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  At Zavabuild, we deliver reliable, high-performance digital solutions for small to medium-sized businesses frustrated with slow, outdated websites that lose leads and limit growth. Our in-house experts handle everything from custom website development to full-stack web apps—eliminating the risks of freelancers or bloated agencies.
+                  At Zavabuild, we deliver reliable, high-performance digital solutions for small to medium-sized businesses frustrated with slow, outdated websites that lose leads and limit growth. Our in-house experts handle everything from custom website development to full-stack web apps, eliminating the risks of freelancers or bloated agencies.
                 </p>
                 <p>
                   <strong className="text-foreground">Our mission:</strong> We build clean, conversion-focused websites and apps that deliver real ROI through fast load times, great user experience, seamless scaling, and smart SEO. We partner with ambitious businesses, from startups launching their first digital presence to established brands optimizing for growth, with technical precision and transparent results.
