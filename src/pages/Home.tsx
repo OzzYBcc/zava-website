@@ -240,7 +240,7 @@ export default function Home() {
                   <ul className="space-y-2 ml-6">
                     <li className="flex gap-2">
                       <span className="text-primary mt-1">•</span>
-                      <span>We understand that every project is unique—that's why at Zavabuild we tailor every detail to your needs each step of the way.</span>
+                      <span>We understand that every project is unique, that's why at Zavabuild we tailor every detail to your needs each step of the way.</span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-primary mt-1">•</span>
@@ -257,7 +257,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <p>
-                  We solve real pain points: Increase conversions by 30%+, slash bounce rates, scale without downtime, and bring in more clients through smart SEO—all with clear communication and agile workflows.
+                  We solve real pain points: Increase conversions by 30%+, slash bounce rates, scale without downtime, and bring in more clients through smart SEO, all with clear communication and agile workflows.
                 </p>
               </div>
             </div>
