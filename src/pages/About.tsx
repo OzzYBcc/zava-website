@@ -104,7 +104,7 @@ export default function About() {
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Most agencies cut corners or outsource critical work. We saw the gap—and closed it.
+                  Most agencies cut corners or outsource critical work. We saw the gap and closed it.
                 </p>
                 <p>
                   Founded by developers and designers tired of fragile, slow, overpriced builds, Zavabuild was created to deliver <strong className="text-foreground">web solutions as ambitious as our clients</strong>. From day one, we've obsessed over three things:
