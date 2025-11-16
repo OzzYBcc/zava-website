@@ -166,7 +166,7 @@ export default function About() {
                 The Team Behind Zavabuild
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                We're a lean, in-house team of experts who code, design, and optimize—<strong>no freelancers, no handoffs.</strong>
+                We're a lean, in-house team of experts who code, design, and optimize.<strong>No freelancers, no handoffs.</strong>
               </p>
             </div>
 
