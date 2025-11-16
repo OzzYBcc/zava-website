@@ -59,7 +59,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <div
-        className="fixed top-0 left-0 h-0.5 bg-primary transition-all duration-300 z-50"
+        className={`fixed left-0 h-0.5 bg-primary transition-all duration-300 z-50 ${navbarVisible ? 'top-16' : 'top-0'}`}
         style={{ width: `${scrollProgress}%` }}
       />
       <header className={`sticky top-0 z-40 bg-background border-b border-border transition-all duration-300 ${navbarVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
