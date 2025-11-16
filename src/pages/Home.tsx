@@ -199,7 +199,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <Button
               size="lg"
-              className="bg-background text-foreground hover:bg-secondary border-2 border-white text-lg px-8 py-6"
+              className="bg-white text-black hover:bg-gray-100 dark:bg-white dark:text-black dark:hover:bg-gray-100 text-lg px-8 py-6"
               onClick={() => {
                 const event = new CustomEvent('openQuestionnaire');
                 window.dispatchEvent(event);
@@ -211,7 +211,7 @@ export default function Home() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-background hover:text-foreground text-lg px-8 py-6"
+                className="border-2 border-white text-white hover:bg-white hover:text-black dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black text-lg px-8 py-6"
               >
                 View Portfolio
               </Button>
@@ -466,7 +466,7 @@ export default function Home() {
             </p>
             <Button
               size="lg"
-              className="bg-background text-foreground hover:bg-secondary border-2 border-primary-foreground text-lg px-8 py-6"
+              className="bg-white text-black hover:bg-gray-100 dark:bg-white dark:text-black dark:hover:bg-gray-100 text-lg px-8 py-6"
               onClick={() => {
                 const event = new CustomEvent('openQuestionnaire');
                 window.dispatchEvent(event);
