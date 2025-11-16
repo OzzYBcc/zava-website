@@ -31,7 +31,7 @@ export default function About() {
     '100% Custom, Zero Templates - Your business isn\'t generic. Your site shouldn\'t be either.',
     'Tailored, Fast-Launch Model - Live in 2-4 weeks. No change-order chaos.',
     'In-House Execution Only - No outsourcing. Full control. Full accountability.',
-    'Built for Growth, Not Just Launch - We don\'t disappear post-launch—we optimize, secure, and scale with you.',
+    'Built for Growth, Not Just Launch - We don\'t disappear post-launch. We optimize, secure, and scale with you.',
     'Performance Guarantee - Below optimal performance? We fix it free.'
   ];
 
