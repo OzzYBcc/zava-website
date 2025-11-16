@@ -309,20 +309,20 @@ export default function Home() {
                 {services.map((service, index) => (
                   <Card key={index} className="min-w-[280px] md:min-w-[300px] lg:min-w-[320px] snap-start transition-all duration-300 hover:scale-105 flex-shrink-0">
                     <CardHeader className="pb-3">
-                      <CardTitle className="text-lg mb-1.5">{service.title}</CardTitle>
-                      <CardDescription className="text-sm">{service.description}</CardDescription>
+                      <CardTitle className="text-base mb-1.5 line-clamp-2">{service.title}</CardTitle>
+                      <CardDescription className="text-xs line-clamp-3">{service.description}</CardDescription>
                     </CardHeader>
-                    <CardContent className="space-y-4">
-                      <ul className="space-y-2">
+                    <CardContent className="space-y-3">
+                      <ul className="space-y-1.5">
                         {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex gap-2 text-xs">
-                            <Check className="w-3.5 h-3.5 text-primary mt-0.5 flex-shrink-0" />
-                            <span>{feature}</span>
+                          <li key={idx} className="flex gap-1.5 text-xs leading-tight">
+                            <Check className="w-3 h-3 text-primary mt-0.5 flex-shrink-0" />
+                            <span className="line-clamp-2">{feature}</span>
                           </li>
                         ))}
                       </ul>
                       <Button
-                        className="w-full"
+                        className="w-full text-xs"
                         size="sm"
                         onClick={() => {
                           const event = new CustomEvent('openQuestionnaire');
