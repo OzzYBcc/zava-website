@@ -47,13 +47,13 @@ export default function About() {
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
             We Build Digital Assets That<br />Grow Your Business
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto">
+          <p className="text-lg md:text-xl lg:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
             High-performance websites and web apps engineered for speed, security, and scale—delivered fast, with zero compromises.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <Button
               size="lg"
-              className="bg-white text-black hover:bg-gray-100 text-lg px-8 py-6"
+              className="bg-background text-foreground hover:bg-secondary border-2 border-white text-lg px-8 py-6"
               onClick={() => {
                 const event = new CustomEvent('openQuestionnaire');
                 window.dispatchEvent(event);
@@ -64,7 +64,7 @@ export default function About() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-black text-lg px-8 py-6"
+              className="border-2 border-white text-white hover:bg-background hover:text-foreground text-lg px-8 py-6"
               onClick={() => {
                 const event = new CustomEvent('openQuestionnaire');
                 window.dispatchEvent(event);
@@ -283,18 +283,18 @@ export default function About() {
       </FadeInSection>
 
       <FadeInSection>
-        <section className="py-24 bg-black text-white">
+        <section className="py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Ready to Build Something That Lasts?
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90">
               Let's talk strategy, not just specs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
                 size="lg"
-                className="bg-white text-black hover:bg-gray-100 text-lg px-8 py-6"
+                className="bg-background text-foreground hover:bg-secondary border-2 border-white text-lg px-8 py-6"
                 onClick={() => {
                   const event = new CustomEvent('openQuestionnaire');
                   window.dispatchEvent(event);
@@ -305,7 +305,7 @@ export default function About() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-black text-lg px-8 py-6"
+                className="border-2 border-white text-white hover:bg-background hover:text-foreground text-lg px-8 py-6"
                 onClick={() => {
                   const event = new CustomEvent('openQuestionnaire');
                   window.dispatchEvent(event);
@@ -314,7 +314,7 @@ export default function About() {
                 Schedule a Free Audit
               </Button>
             </div>
-            <p className="text-sm text-gray-400 mt-6">
+            <p className="text-sm opacity-70 mt-6">
               Custom quote in 24 hours • We'll analyze your current site and show exact improvement opportunities
             </p>
           </div>

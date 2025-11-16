@@ -193,13 +193,13 @@ export default function Home() {
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
             High-Performance Websites & Apps<br />Built for Growth
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl mb-6 text-gray-200 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl lg:text-2xl mb-6 opacity-90 max-w-4xl mx-auto leading-relaxed">
             Custom design. Scalable development. Lightning-fast performance. Zavabuild creates premium websites and web apps engineered to convert, rank, and scale with your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <Button
               size="lg"
-              className="bg-white text-black hover:bg-gray-100 text-lg px-8 py-6"
+              className="bg-background text-foreground hover:bg-secondary border-2 border-white text-lg px-8 py-6"
               onClick={() => {
                 const event = new CustomEvent('openQuestionnaire');
                 window.dispatchEvent(event);
@@ -211,7 +211,7 @@ export default function Home() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-black text-lg px-8 py-6"
+                className="border-2 border-white text-white hover:bg-background hover:text-foreground text-lg px-8 py-6"
               >
                 View Portfolio
               </Button>
@@ -456,17 +456,17 @@ export default function Home() {
       </FadeInSection>
 
       <FadeInSection>
-        <section className="py-24 bg-black text-white">
+        <section className="py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Ready for a Website or App That Accelerates Your Business?
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto opacity-90">
               Partner with Zavabuild for custom, high-performance solutions that deliver real results—fast. Tell us your goals; we'll build the path forward.
             </p>
             <Button
               size="lg"
-              className="bg-white text-black hover:bg-gray-100 text-lg px-8 py-6"
+              className="bg-background text-foreground hover:bg-secondary border-2 border-primary-foreground text-lg px-8 py-6"
               onClick={() => {
                 const event = new CustomEvent('openQuestionnaire');
                 window.dispatchEvent(event);

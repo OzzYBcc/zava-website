@@ -201,7 +201,7 @@ export default function QuestionnaireModal({ open, onOpenChange }: Questionnaire
               value={budget}
               onValueChange={setBudget}
             />
-            <div className="flex justify-between text-xs text-gray-500">
+            <div className="flex justify-between text-xs text-muted-foreground">
               <span>£1,500</span>
               <span>£15,000+</span>
             </div>
@@ -265,7 +265,7 @@ export default function QuestionnaireModal({ open, onOpenChange }: Questionnaire
             <Button type="button" variant="outline" onClick={() => onOpenChange(false)} className="flex-1">
               Cancel
             </Button>
-            <Button type="submit" className="flex-1 bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200">
+            <Button type="submit" className="flex-1">
               Submit Enquiry
             </Button>
           </div>
