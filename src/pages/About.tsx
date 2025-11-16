@@ -19,7 +19,7 @@ export default function About() {
     },
     {
       title: 'Transparent Partnership',
-      description: 'Honest timelines. Weekly demos. No surprises—just clarity and control.'
+      description: 'Honest timelines. Weekly demos. No surprises, just clarity and control.'
     },
     {
       title: 'Results Obsessed',
