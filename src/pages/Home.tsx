@@ -291,38 +291,39 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="relative max-w-7xl mx-auto">
+            <div className="relative max-w-5xl mx-auto flex items-center gap-6">
               <Button
                 variant="outline"
                 size="icon"
                 onClick={scrollLeft}
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 h-12 w-12 hidden md:flex"
+                className="hidden md:flex h-14 w-14 rounded-full shrink-0"
               >
                 <ChevronLeft className="h-6 w-6" />
               </Button>
 
               <div
                 ref={scrollContainerRef}
-                className="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar px-12 md:px-16"
+                className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar"
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               >
                 {services.map((service, index) => (
-                  <Card key={index} className="min-w-[300px] md:min-w-[350px] lg:min-w-[380px] snap-start transition-all duration-300 hover:scale-105 flex-shrink-0">
-                    <CardHeader>
-                      <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
-                      <CardDescription className="text-base">{service.description}</CardDescription>
+                  <Card key={index} className="min-w-[280px] md:min-w-[300px] lg:min-w-[320px] snap-start transition-all duration-300 hover:scale-105 flex-shrink-0">
+                    <CardHeader className="pb-3">
+                      <CardTitle className="text-lg mb-1.5">{service.title}</CardTitle>
+                      <CardDescription className="text-sm">{service.description}</CardDescription>
                     </CardHeader>
-                    <CardContent>
-                      <ul className="space-y-3 mb-6">
+                    <CardContent className="space-y-4">
+                      <ul className="space-y-2">
                         {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex gap-2 text-sm">
-                            <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                          <li key={idx} className="flex gap-2 text-xs">
+                            <Check className="w-3.5 h-3.5 text-primary mt-0.5 flex-shrink-0" />
                             <span>{feature}</span>
                           </li>
                         ))}
                       </ul>
                       <Button
                         className="w-full"
+                        size="sm"
                         onClick={() => {
                           const event = new CustomEvent('openQuestionnaire');
                           window.dispatchEvent(event);
@@ -339,7 +340,7 @@ export default function Home() {
                 variant="outline"
                 size="icon"
                 onClick={scrollRight}
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 h-12 w-12 hidden md:flex"
+                className="hidden md:flex h-14 w-14 rounded-full shrink-0"
               >
                 <ChevronRight className="h-6 w-6" />
               </Button>
