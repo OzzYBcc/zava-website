@@ -153,7 +153,7 @@ export default function Home() {
     },
     {
       question: 'Is responsive web development included?',
-      answer: 'Absolutely—every project is mobile-first for flawless performance across devices.'
+      answer: 'Absolutely. Every project is mobile-first for flawless performance across devices.'
     },
     {
       question: 'What makes your web app builder unique?',
