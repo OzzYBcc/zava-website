@@ -39,7 +39,7 @@ export default function Home() {
     },
     {
       title: 'Performance Optimization & Core Web Vitals',
-      description: 'Slow sites bleed revenue—we provide website speed optimization that improves SEO, retention, and bottom-line results.',
+      description: 'Slow sites bleed revenue. We provide website speed optimization that improves SEO, retention, and bottom-line results.',
       features: [
         'Advanced tactics: Image compression, caching, CDN configuration',
         'Engineered for top-tier speed to keep visitors engaged',
