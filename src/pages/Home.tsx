@@ -233,7 +233,8 @@ export default function Home() {
                   At Zavabuild, we deliver reliable, high-performance digital solutions for small to medium-sized businesses frustrated with slow, outdated websites that lose leads and limit growth. Our in-house experts handle everything from custom website development to full-stack web apps—eliminating the risks of freelancers or bloated agencies.
                 </p>
                 <p>
-                  <strong className="text-foreground">Our mission:</strong> Build no-nonsense, conversion-optimized websites and applications that deliver measurable ROI through faster load times, superior user experiences, seamless scalability, and SEO strategies that attract more qualified clients. We bake in technical SEO, keyword optimization, and content alignment from day one to drive organic traffic, lower acquisition costs, and fill your pipeline with high-intent leads. We serve e-commerce, SaaS, professional services, and B2B clients with precision and transparency.
+                  <strong className="text-foreground">Our mission:</strong> We build clean, conversion-focused websites and apps that deliver real ROI through fast load times, great user experience, seamless scaling, and smart SEO. We partner with ambitious businesses, from startups launching their first digital presence to established brands optimizing for growth, with technical precision and transparent results.
+
                 </p>
                 <div>
                   <p className="font-semibold text-foreground mb-3">What sets us apart:</p>
