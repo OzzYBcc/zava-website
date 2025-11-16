@@ -303,11 +303,11 @@ export default function Home() {
 
               <div
                 ref={scrollContainerRef}
-                className="flex gap-6 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory hide-scrollbar py-2"
-                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                className="flex gap-6 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory snap-always hide-scrollbar py-2 px-1"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', scrollPaddingLeft: '0px', scrollPaddingRight: '0px' }}
               >
                 {services.map((service, index) => (
-                  <Card key={index} className="w-[240px] md:w-[260px] lg:w-[280px] min-h-[420px] snap-start transition-all duration-300 hover:scale-105 flex-shrink-0 flex flex-col">
+                  <Card key={index} className="w-[240px] md:w-[260px] lg:w-[280px] min-h-[420px] snap-center snap-always transition-all duration-300 hover:scale-105 flex-shrink-0 flex flex-col">
                     <CardHeader className="pb-4">
                       <CardTitle className="text-base mb-2 leading-snug">{service.title}</CardTitle>
                       <CardDescription className="text-xs leading-relaxed">{service.description}</CardDescription>
