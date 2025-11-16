@@ -2,10 +2,12 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import FadeInSection from '@/components/FadeInSection';
-import { ArrowRight, Search, Pencil, Code, Rocket, TrendingUp, Check } from 'lucide-react';
+import { ArrowRight, Search, Pencil, Code, Rocket, TrendingUp, Check, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function Home() {
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const services = [
     {
       title: 'Custom Website Design & Development',
@@ -277,34 +279,73 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-              {services.map((service, index) => (
-                <Card key={index} className="transition-all duration-300 hover:scale-105">
-                  <CardHeader>
-                    <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
-                    <CardDescription className="text-base">{service.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3 mb-6">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex gap-2 text-sm">
-                          <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Button
-                      className="w-full"
-                      onClick={() => {
-                        const event = new CustomEvent('openQuestionnaire');
-                        window.dispatchEvent(event);
-                      }}
-                    >
-                      {service.cta}
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="relative max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {services.slice(currentServiceIndex, currentServiceIndex + 3).map((service, index) => (
+                  <Card key={currentServiceIndex + index} className="transition-all duration-300 hover:scale-105">
+                    <CardHeader>
+                      <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
+                      <CardDescription className="text-base">{service.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-3 mb-6">
+                        {service.features.map((feature, idx) => (
+                          <li key={idx} className="flex gap-2 text-sm">
+                            <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <Button
+                        className="w-full"
+                        onClick={() => {
+                          const event = new CustomEvent('openQuestionnaire');
+                          window.dispatchEvent(event);
+                        }}
+                      >
+                        {service.cta}
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              <div className="flex justify-center items-center gap-4 mt-8">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => setCurrentServiceIndex(Math.max(0, currentServiceIndex - 3))}
+                  disabled={currentServiceIndex === 0}
+                  className="h-12 w-12"
+                >
+                  <ChevronLeft className="h-6 w-6" />
+                </Button>
+
+                <div className="flex gap-2">
+                  {Array.from({ length: Math.ceil(services.length / 3) }).map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentServiceIndex(index * 3)}
+                      className={`h-2 rounded-full transition-all ${
+                        currentServiceIndex === index * 3
+                          ? 'w-8 bg-primary'
+                          : 'w-2 bg-muted-foreground/30'
+                      }`}
+                      aria-label={`Go to page ${index + 1}`}
+                    />
+                  ))}
+                </div>
+
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => setCurrentServiceIndex(Math.min(services.length - 3, currentServiceIndex + 3))}
+                  disabled={currentServiceIndex >= services.length - 3}
+                  className="h-12 w-12"
+                >
+                  <ChevronRight className="h-6 w-6" />
+                </Button>
+              </div>
             </div>
           </div>
         </section>
