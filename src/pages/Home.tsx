@@ -197,24 +197,21 @@ export default function Home() {
             Custom design. Scalable development. Lightning-fast performance. Zavabuild creates premium websites and web apps engineered to convert, rank, and scale with your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <Button
-              size="lg"
-              className="bg-white text-black hover:bg-gray-100 dark:bg-white dark:text-black dark:hover:bg-gray-100 text-lg px-8 py-6"
+            <button
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors bg-white text-black hover:bg-gray-100 text-lg px-8 py-6"
               onClick={() => {
                 const event = new CustomEvent('openQuestionnaire');
                 window.dispatchEvent(event);
               }}
             >
               Start Your Project <ArrowRight className="ml-2" />
-            </Button>
+            </button>
             <Link to="/portfolio">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-black dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black text-lg px-8 py-6"
+              <button
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors border-2 border-white bg-transparent text-white hover:bg-white hover:text-black text-lg px-8 py-6"
               >
                 View Portfolio
-              </Button>
+              </button>
             </Link>
           </div>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm md:text-base">
@@ -464,16 +461,15 @@ export default function Home() {
             <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto opacity-90">
               Partner with Zavabuild for custom, high-performance solutions that deliver real results—fast. Tell us your goals; we'll build the path forward.
             </p>
-            <Button
-              size="lg"
-              className="bg-white text-black hover:bg-gray-100 dark:bg-white dark:text-black dark:hover:bg-gray-100 text-lg px-8 py-6"
+            <button
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors bg-white text-black hover:bg-gray-100 text-lg px-8 py-6"
               onClick={() => {
                 const event = new CustomEvent('openQuestionnaire');
                 window.dispatchEvent(event);
               }}
             >
               Start Your Project Today <ArrowRight className="ml-2" />
-            </Button>
+            </button>
           </div>
         </section>
       </FadeInSection>
