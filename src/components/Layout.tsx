@@ -11,19 +11,30 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [questionnaireOpen, setQuestionnaireOpen] = useState(false);
+  const [navbarVisible, setNavbarVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
+      const currentScrollY = window.scrollY;
       const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const progress = (window.scrollY / totalHeight) * 100;
+      const progress = (currentScrollY / totalHeight) * 100;
       setScrollProgress(progress);
+
+      if (currentScrollY < lastScrollY || currentScrollY < 10) {
+        setNavbarVisible(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 10) {
+        setNavbarVisible(false);
+      }
+
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   useEffect(() => {
     setMobileMenuOpen(false);
@@ -47,7 +58,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-background border-b border-border transition-colors duration-300">
+      <header className={`sticky top-0 z-50 bg-background border-b border-border transition-all duration-300 ${navbarVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
         <nav className="container mx-auto px-4 lg:px-8 h-16 flex items-center justify-between">
           <Link to="/" onClick={handleLogoClick} className="flex items-center transition-opacity duration-300 hover:opacity-80">
             <img src={theme === 'dark' ? '/logo3-dark.svg' : '/logo3-light.svg'} alt="ZAVA" className="h-12" />
