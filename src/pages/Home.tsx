@@ -337,7 +337,7 @@ export default function Home() {
             </div>
 
             <p className="text-center text-lg text-muted-foreground mt-12 max-w-2xl mx-auto">
-              Clear milestones, open updates—results you can trust.
+              Clear milestones, open updates. Results you can trust.
             </p>
           </div>
         </section>
