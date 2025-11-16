@@ -49,8 +49,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <header className="sticky top-0 z-50 bg-background border-b border-border transition-colors duration-300">
         <nav className="container mx-auto px-4 lg:px-8 h-16 flex items-center justify-between">
-          <Link to="/" onClick={handleLogoClick} className="text-2xl font-bold text-foreground transition-colors duration-300">
-            ZAVA
+          <Link to="/" onClick={handleLogoClick} className="flex items-center transition-opacity duration-300 hover:opacity-80">
+            <img src="/logo3-light.svg" alt="ZAVA" className="h-8" />
           </Link>
 
           <div className="hidden md:flex items-center gap-4">
