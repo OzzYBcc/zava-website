@@ -86,24 +86,3 @@ html {
     font-size: 18px;
   }
 }
-
-/* Dark mode button fixes for buttons on dark backgrounds */
-.dark button.bg-white {
-  background-color: rgb(255 255 255) !important;
-  color: rgb(0 0 0) !important;
-}
-
-.dark button.bg-white:hover {
-  background-color: rgb(243 244 246) !important;
-}
-
-.dark button.bg-transparent {
-  background-color: transparent !important;
-  color: rgb(255 255 255) !important;
-  border-color: rgb(255 255 255) !important;
-}
-
-.dark button.bg-transparent:hover {
-  background-color: rgb(255 255 255) !important;
-  color: rgb(0 0 0) !important;
-}

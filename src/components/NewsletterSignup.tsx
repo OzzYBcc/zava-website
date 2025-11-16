@@ -30,9 +30,9 @@ export default function NewsletterSignup() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
-        className="bg-background text-foreground"
+        className="bg-white text-black"
       />
-      <Button type="submit" disabled={loading} variant="outline" className="bg-background text-foreground hover:bg-secondary">
+      <Button type="submit" disabled={loading} variant="outline" className="bg-white text-black hover:bg-gray-100">
         {loading ? 'Sending...' : 'Subscribe'}
       </Button>
     </form>

@@ -134,7 +134,7 @@ export default function Services() {
               </p>
               <Button
                 size="lg"
-                className="bg-primary text-primary-foreground hover:opacity-90"
+                variant="outline"
                 onClick={() => {
                   const event = new CustomEvent('openQuestionnaire');
                   window.dispatchEvent(event);

@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import FadeInSection from '@/components/FadeInSection';
 import { ArrowRight, Zap, Shield, TrendingUp, CheckCircle } from 'lucide-react';
@@ -46,28 +47,31 @@ export default function About() {
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
             We Build Digital Assets That<br />Grow Your Business
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
+          <p className="text-lg md:text-xl lg:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto">
             High-performance websites and web apps engineered for speed, security, and scale—delivered fast, with zero compromises.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <button
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors !bg-white !text-black hover:!bg-gray-100 px-6 py-3.5 text-base"
+            <Button
+              size="lg"
+              className="bg-white text-black hover:bg-gray-100 text-lg px-8 py-6"
               onClick={() => {
                 const event = new CustomEvent('openQuestionnaire');
                 window.dispatchEvent(event);
               }}
             >
               Start Your Project <ArrowRight className="ml-2" />
-            </button>
-            <button
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors border-2 !border-white !bg-transparent !text-white hover:!bg-white hover:!text-black px-6 py-3.5 text-base"
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-black text-lg px-8 py-6"
               onClick={() => {
                 const event = new CustomEvent('openQuestionnaire');
                 window.dispatchEvent(event);
               }}
             >
               Schedule a Free Audit
-            </button>
+            </Button>
           </div>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm md:text-base">
             <div className="flex items-center gap-2">
@@ -279,35 +283,38 @@ export default function About() {
       </FadeInSection>
 
       <FadeInSection>
-        <section className="py-24 bg-primary text-primary-foreground">
+        <section className="py-24 bg-black text-white">
           <div className="container mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Ready to Build Something That Lasts?
             </h2>
-            <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90">
+            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Let's talk strategy, not just specs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors !bg-white !text-black hover:!bg-gray-100 px-6 py-3.5 text-base"
+              <Button
+                size="lg"
+                className="bg-white text-black hover:bg-gray-100 text-lg px-8 py-6"
                 onClick={() => {
                   const event = new CustomEvent('openQuestionnaire');
                   window.dispatchEvent(event);
                 }}
               >
                 Start Your Project <ArrowRight className="ml-2" />
-              </button>
-              <button
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors border-2 !border-white !bg-transparent !text-white hover:!bg-white hover:!text-black px-6 py-3.5 text-base"
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-black text-lg px-8 py-6"
                 onClick={() => {
                   const event = new CustomEvent('openQuestionnaire');
                   window.dispatchEvent(event);
                 }}
               >
                 Schedule a Free Audit
-              </button>
+              </Button>
             </div>
-            <p className="text-sm opacity-70 mt-6">
+            <p className="text-sm text-gray-400 mt-6">
               Custom quote in 24 hours • We'll analyze your current site and show exact improvement opportunities
             </p>
           </div>
