@@ -149,7 +149,7 @@ export default function Home() {
   const faqs = [
     {
       question: 'How long does custom website development take?',
-      answer: '2-4 weeks on average—faster than traditional agencies, with locked timelines.'
+      answer: '2-4 weeks on average. Faster than traditional agencies, with locked timelines.'
     },
     {
       question: 'Is responsive web development included?',
