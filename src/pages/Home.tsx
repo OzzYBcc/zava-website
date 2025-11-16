@@ -307,22 +307,22 @@ export default function Home() {
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               >
                 {services.map((service, index) => (
-                  <Card key={index} className="min-w-[280px] md:min-w-[300px] lg:min-w-[320px] snap-start transition-all duration-300 hover:scale-105 flex-shrink-0">
-                    <CardHeader className="pb-3">
-                      <CardTitle className="text-base mb-1.5 line-clamp-2">{service.title}</CardTitle>
-                      <CardDescription className="text-xs line-clamp-3">{service.description}</CardDescription>
+                  <Card key={index} className="w-[240px] md:w-[260px] lg:w-[280px] min-h-[420px] snap-start transition-all duration-300 hover:scale-105 flex-shrink-0 flex flex-col">
+                    <CardHeader className="pb-4">
+                      <CardTitle className="text-base mb-2 leading-snug">{service.title}</CardTitle>
+                      <CardDescription className="text-xs leading-relaxed">{service.description}</CardDescription>
                     </CardHeader>
-                    <CardContent className="space-y-3">
-                      <ul className="space-y-1.5">
+                    <CardContent className="space-y-4 flex-1 flex flex-col">
+                      <ul className="space-y-2.5 flex-1">
                         {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex gap-1.5 text-xs leading-tight">
-                            <Check className="w-3 h-3 text-primary mt-0.5 flex-shrink-0" />
-                            <span className="line-clamp-2">{feature}</span>
+                          <li key={idx} className="flex gap-2 text-xs leading-relaxed">
+                            <Check className="w-3.5 h-3.5 text-primary mt-0.5 flex-shrink-0" />
+                            <span>{feature}</span>
                           </li>
                         ))}
                       </ul>
                       <Button
-                        className="w-full text-xs"
+                        className="w-full text-xs mt-auto"
                         size="sm"
                         onClick={() => {
                           const event = new CustomEvent('openQuestionnaire');
