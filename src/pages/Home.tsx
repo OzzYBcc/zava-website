@@ -198,7 +198,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <button
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors bg-white text-black hover:bg-gray-100 text-lg px-8 py-6"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors !bg-white !text-black hover:!bg-gray-100 px-6 py-3.5 text-base"
               onClick={() => {
                 const event = new CustomEvent('openQuestionnaire');
                 window.dispatchEvent(event);
@@ -208,7 +208,7 @@ export default function Home() {
             </button>
             <Link to="/portfolio">
               <button
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors border-2 border-white bg-transparent text-white hover:bg-white hover:text-black text-lg px-8 py-6"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors border-2 !border-white !bg-transparent !text-white hover:!bg-white hover:!text-black px-6 py-3.5 text-base"
               >
                 View Portfolio
               </button>
@@ -462,7 +462,7 @@ export default function Home() {
               Partner with Zavabuild for custom, high-performance solutions that deliver real results—fast. Tell us your goals; we'll build the path forward.
             </p>
             <button
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors bg-white text-black hover:bg-gray-100 text-lg px-8 py-6"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors !bg-white !text-black hover:!bg-gray-100 px-6 py-3.5 text-base"
               onClick={() => {
                 const event = new CustomEvent('openQuestionnaire');
                 window.dispatchEvent(event);
