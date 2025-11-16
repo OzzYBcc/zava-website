@@ -48,6 +48,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     }
   };
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, to: string) => {
+    if (location.pathname === to) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About' },
@@ -73,6 +80,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <Link
                 key={link.to}
                 to={link.to}
+                onClick={(e) => handleNavClick(e, link.to)}
                 className="text-foreground hover:text-muted-foreground transition-colors duration-300"
               >
                 {link.label}
@@ -100,6 +108,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <Link
                   key={link.to}
                   to={link.to}
+                  onClick={(e) => handleNavClick(e, link.to)}
                   className="text-foreground hover:text-muted-foreground transition-colors duration-300 py-2"
                 >
                   {link.label}
