@@ -84,7 +84,7 @@ export default function About() {
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  We don't just build websites. We create <strong className="text-foreground">custom digital solutions</strong> that convert visitors, rank higher, and scale effortlessly—without the headaches of freelancers or bloated agencies.
+                  We don't just build websites. We create <strong className="text-foreground">custom digital solutions</strong> that convert visitors, rank higher, and scale effortlessly, without the headaches of freelancers or bloated agencies.
                 </p>
                 <p>
                   Zavabuild exists to give SMBs in e-commerce, SaaS, professional services, and B2B the <strong className="text-foreground">reliable, high-performance web presence</strong> they deserve. No templates. No outsourcing. Just clean code, fast load times, and measurable ROI.
