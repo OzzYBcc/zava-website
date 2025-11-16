@@ -169,7 +169,7 @@ export default function Home() {
     },
     {
       question: 'Can you improve an existing website?',
-      answer: 'Yes—start with a free audit to pinpoint speed, security, and conversion opportunities.'
+      answer: 'Yes. Start with a free audit to pinpoint speed, security, and conversion opportunities.'
     },
     {
       question: 'Which industries do you serve?',
@@ -453,7 +453,7 @@ export default function Home() {
               Ready for a Website or App That Accelerates Your Business?
             </h2>
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Partner with Zavabuild for custom, high-performance solutions that deliver real results—fast. Tell us your goals; we'll build the path forward.
+              Partner with Zavabuild for custom, high-performance solutions that deliver real results, fast. Tell us your goals; we'll build the path forward.
             </p>
             <Button
               size="lg"
