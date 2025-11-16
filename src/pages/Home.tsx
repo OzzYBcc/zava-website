@@ -125,7 +125,7 @@ export default function Home() {
 
   const testimonials = [
     {
-      quote: 'Zavabuild transformed our slow site into a lead-generating powerhouse—live in 2 weeks with crystal-clear updates throughout.',
+      quote: 'Zavabuild transformed our slow site into a lead-generating powerhouse, live in 2 weeks with crystal-clear updates throughout.',
       author: 'CEO, SaaS Startup'
     },
     {
