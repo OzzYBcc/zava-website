@@ -157,7 +157,7 @@ export default function Home() {
     },
     {
       question: 'What makes your web app builder unique?',
-      answer: 'In-house team, scalable code, and performance obsession—no templates, no outsourcing.'
+      answer: 'In-house team, scalable code, and performance obsession. No templates, no outsourcing.'
     },
     {
       question: 'Does maintenance come standard?',
