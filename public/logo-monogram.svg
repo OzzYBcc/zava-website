@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="60" height="60">
+  <!-- White background fill (like Velo.xyz) for light mode visibility -->
+  <rect x="0" y="0" width="60" height="60" fill="#FFFFFF" rx="8"/>
+  
+  <!-- Outer frame – deep charcoal (professional contrast on white) -->
+  <rect x="2" y="2" width="56" height="56" rx="6" stroke="#1F2937" stroke-width="2.5" fill="none"/>
+  
+  <!-- Inner frame – polished steel (subtle depth) -->
+  <rect x="5" y="5" width="50" height="50" rx="4" stroke="#4B5563" stroke-width="1.2" fill="none"/>
+  
+  <!-- Z – deep gunmetal with platinum outline (high-ticket sophistication) -->
+  <text
+    x="30"
+    y="30"
+    font-family="Georgia, serif"
+    font-size="35"
+    font-weight="700"
+    text-anchor="middle"
+    dominant-baseline="central"
+    fill="#2D3748"
+    stroke="#9CA3AF"
+    stroke-width="0.9"
+    paint-order="stroke fill"
+  >
+    Z
+  </text>
+</svg>
