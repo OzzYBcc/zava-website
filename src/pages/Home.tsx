@@ -303,7 +303,7 @@ export default function Home() {
 
               <div
                 ref={scrollContainerRef}
-                className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar"
+                className="flex gap-6 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory hide-scrollbar py-2"
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               >
                 {services.map((service, index) => (
