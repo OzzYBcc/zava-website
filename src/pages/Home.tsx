@@ -42,7 +42,7 @@ export default function Home() {
       description: 'Slow sites bleed revenue—we provide website speed optimization that improves SEO, retention, and bottom-line results.',
       features: [
         'Advanced tactics: Image compression, caching, CDN configuration',
-        'Guaranteed 95+ Lighthouse scores to keep visitors engaged',
+        'Achieve top performance scores to keep visitors engaged',
         'Continuous monitoring for sustained speed excellence'
       ],
       cta: 'Optimize My Site Now'
@@ -105,31 +105,31 @@ export default function Home() {
   const caseStudies = [
     {
       title: 'SaaS Dashboard for Tech Startup',
-      challenge: 'Legacy platform with slow loads and poor mobile UX, causing 40% signup drop-off.',
+      challenge: 'Legacy platform with slow loads and poor mobile UX, causing signup drop-off.',
       solution: 'Full custom web app builder rebuild with responsive web development, API integrations, and speed optimization.',
-      results: '50% faster loads, 35% higher user retention, live in 3 weeks.'
+      results: 'Faster loads, higher user retention, quick launch.'
     },
     {
       title: 'E-commerce Store for Professional Services Firm',
       challenge: 'Generic Shopify setup with high mobile bounce rates and low conversions.',
       solution: 'Headless commerce implementation, custom themes, and Core Web Vitals tuning.',
-      results: '42% lower bounce rate, 28% sales increase, 95+ Lighthouse score.'
+      results: 'Lower bounce rate, sales increase, top performance score.'
     },
     {
       title: 'B2B Lead Generation Site for Scale-up',
       challenge: 'Scalability limits and security gaps blocking expansion.',
       solution: 'End-to-end custom website development with robust architecture and ongoing maintenance.',
-      results: 'Handled 5x traffic surge seamlessly, 30% more qualified leads, delivered under budget.'
+      results: 'Handled traffic surge seamlessly, more qualified leads, delivered under budget.'
     }
   ];
 
   const testimonials = [
     {
-      quote: 'Zavabuild transformed our slow site into a lead-generating powerhouse—live in 2 weeks with crystal-clear updates throughout.',
+      quote: 'Zavabuild transformed our slow site into a lead-generating powerhouse—with crystal-clear updates throughout.',
       author: 'CEO, SaaS Startup'
     },
     {
-      quote: 'Ditched freelancers for good. Their optimization work lifted e-commerce sales 35% almost instantly. Top-tier responsive web development.',
+      quote: 'Ditched freelancers for good. Their optimization work lifted e-commerce sales almost instantly. Top-tier responsive web development.',
       author: 'Founder, Online Retailer'
     },
     {
@@ -149,7 +149,7 @@ export default function Home() {
   const faqs = [
     {
       question: 'How long does custom website development take?',
-      answer: '2-4 weeks on average—faster than traditional agencies, with locked timelines.'
+      answer: 'Quick turnaround—faster than traditional agencies, with locked timelines.'
     },
     {
       question: 'Is responsive web development included?',
@@ -220,7 +220,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm md:text-base">
             <div className="flex items-center gap-2">
               <Check className="w-5 h-5" />
-              <span>Mobile-first, 95+ Lighthouse scores guaranteed</span>
+              <span>Mobile-first, optimized performance guaranteed</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-5 h-5" />
@@ -239,10 +239,10 @@ export default function Home() {
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  At Zavabuild, we deliver reliable, high-performance digital solutions for small to medium-sized businesses frustrated with slow, outdated websites that lose leads and limit growth. Our in-house experts handle everything from custom website development to full-stack web apps—eliminating the risks of freelancers or bloated agencies.
+                  At Zavabuild, we deliver reliable, high-performance digital solutions for small to medium-sized businesses frustrated with slow, outdated websites that lose leads and limit growth. Our in-house experts handle custom website development to full-stack web apps—eliminating freelancer risks or agency bloat.
                 </p>
                 <p>
-                  <strong className="text-foreground">Our mission:</strong> Build no-nonsense, conversion-optimized websites and applications that deliver measurable ROI through faster load times, superior user experiences, seamless scalability, and SEO strategies that attract more qualified clients. We bake in technical SEO, keyword optimization, and content alignment from day one to drive organic traffic, lower acquisition costs, and fill your pipeline with high-intent leads. We serve e-commerce, SaaS, professional services, and B2B clients with precision and transparency.
+                  <strong className="text-foreground">Our mission:</strong> Build conversion-optimized websites and applications that deliver ROI through fast load times, strong user experiences, seamless scalability, and SEO strategies that attract qualified clients. We integrate technical SEO, keyword optimization, and content alignment to boost organic traffic, cut acquisition costs, and generate high-intent leads. We serve e-commerce, SaaS, professional services, and B2B clients with precision and transparency.
                 </p>
                 <div>
                   <p className="font-semibold text-foreground mb-3">What sets us apart:</p>
@@ -257,7 +257,7 @@ export default function Home() {
                     </li>
                     <li className="flex gap-2">
                       <span className="text-primary mt-1">•</span>
-                      <span>Performance-first mindset: Every build is mobile-first, responsive web development that dominates Core Web Vitals.</span>
+                      <span>Performance-first mindset: Every build is mobile-first, responsive web development that excels in Core Web Vitals.</span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-primary mt-1">•</span>
@@ -266,7 +266,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <p>
-                  We solve real pain points: Increase conversions by 30%+, slash bounce rates, scale without downtime, and bring in more clients through smart SEO—all with clear communication and agile workflows.
+                  We solve real pain points: Boost conversions, slash bounce rates, scale without downtime, and attract more clients through smart SEO—all with clear communication and agile workflows.
                 </p>
               </div>
             </div>
