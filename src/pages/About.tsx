@@ -11,7 +11,7 @@ export default function About() {
     },
     {
       title: 'Security by Default',
-      description: 'Enterprise-grade protection standard: SSL, secure auth, role-based access, automated backups. Your data—and your customers\'—stay safe.'
+      description: 'Enterprise-grade protection standard: SSL, secure auth, role-based access, automated backups. Your data, and your customers\' Stay safe.'
     },
     {
       title: 'Scalability Engineered In',
