@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="60" height="60">
+  <!-- Outer frame -->
+  <rect x="2" y="2" width="56" height="56" rx="8" stroke="#C0C0C0" stroke-width="2" fill="none"/>
+  <!-- Inner frame -->
+  <rect x="5" y="5" width="50" height="50" rx="6" stroke="#1F2937" stroke-width="1" fill="none"/>
+  
+  <!-- Z monogram (perfectly centered) -->
+  <text
+    x="30"
+    y="30"
+    font-family="Georgia, serif"
+    font-size="34"
+    font-weight="700"
+    text-anchor="middle"
+    dominant-baseline="central"
+    fill="#1F2937"
+  >
+    Z
+  </text>
+</svg>
