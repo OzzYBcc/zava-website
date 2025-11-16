@@ -127,20 +127,19 @@ export default function Services() {
           </div>
 
           <FadeInSection>
-            <div className="mt-16 bg-secondary rounded-lg p-8 md:p-12 text-center max-w-4xl mx-auto transition-colors duration-300">
+            <div className="mt-16 bg-background rounded-lg p-8 md:p-12 text-center max-w-4xl mx-auto transition-colors duration-300 border border-border">
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">Need Something Different?</h2>
               <p className="text-muted-foreground mb-6">
                 Every business is unique. If you need a custom solution, we'd love to discuss your specific requirements and create a tailored package.
               </p>
               <Button
                 size="lg"
-                variant="outline"
                 onClick={() => {
                   const event = new CustomEvent('openQuestionnaire');
                   window.dispatchEvent(event);
                 }}
               >
-                Discuss Custom Project
+                Get Started
               </Button>
             </div>
           </FadeInSection>

@@ -196,7 +196,7 @@ export default function Home() {
           <p className="text-lg md:text-xl lg:text-2xl mb-6 text-gray-200 max-w-4xl mx-auto leading-relaxed">
             Custom design. Scalable development. Lightning-fast performance. Zavabuild creates premium websites and web apps engineered to convert, rank, and scale with your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+          <div className="flex justify-center items-center mb-8">
             <Button
               size="lg"
               className="bg-white text-black hover:bg-gray-100 text-lg px-8 py-6"
@@ -207,15 +207,6 @@ export default function Home() {
             >
               Start Your Project <ArrowRight className="ml-2" />
             </Button>
-            <Link to="/portfolio">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-black text-lg px-8 py-6"
-              >
-                View Portfolio
-              </Button>
-            </Link>
           </div>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm md:text-base">
             <div className="flex items-center gap-2">

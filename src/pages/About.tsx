@@ -50,7 +50,7 @@ export default function About() {
           <p className="text-lg md:text-xl lg:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto">
             High-performance websites and web apps engineered for speed, security, and scale—delivered fast, with zero compromises.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+          <div className="flex justify-center items-center mb-8">
             <Button
               size="lg"
               className="bg-white text-black hover:bg-gray-100 text-lg px-8 py-6"
@@ -60,17 +60,6 @@ export default function About() {
               }}
             >
               Start Your Project <ArrowRight className="ml-2" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-black text-lg px-8 py-6"
-              onClick={() => {
-                const event = new CustomEvent('openQuestionnaire');
-                window.dispatchEvent(event);
-              }}
-            >
-              Schedule a Free Audit
             </Button>
           </div>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm md:text-base">
@@ -291,7 +280,7 @@ export default function About() {
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Let's talk strategy, not just specs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex justify-center items-center">
               <Button
                 size="lg"
                 className="bg-white text-black hover:bg-gray-100 text-lg px-8 py-6"
@@ -301,17 +290,6 @@ export default function About() {
                 }}
               >
                 Start Your Project <ArrowRight className="ml-2" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-black text-lg px-8 py-6"
-                onClick={() => {
-                  const event = new CustomEvent('openQuestionnaire');
-                  window.dispatchEvent(event);
-                }}
-              >
-                Schedule a Free Audit
               </Button>
             </div>
             <p className="text-sm text-gray-400 mt-6">
