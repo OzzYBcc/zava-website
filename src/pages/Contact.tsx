@@ -79,7 +79,7 @@ export default function Contact() {
                     <Phone size={24} />
                   </div>
                   <CardTitle>Phone</CardTitle>
-                  <CardDescription>+44 20 1234 5678</CardDescription>
+                  <CardDescription>+44 078 4082 7694</CardDescription>
                 </CardHeader>
               </Card>
             </FadeInSection>
@@ -91,7 +91,7 @@ export default function Contact() {
                     <MapPin size={24} />
                   </div>
                   <CardTitle>Location</CardTitle>
-                  <CardDescription>London, United Kingdom</CardDescription>
+                  <CardDescription>Middlesbrough, United Kingdom</CardDescription>
                 </CardHeader>
               </Card>
             </FadeInSection>
