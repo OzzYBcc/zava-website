@@ -7,7 +7,7 @@ export default function About() {
   const coreValues = [
     {
       title: 'Performance-First',
-      description: 'Speed isn\'t optional—it\'s revenue. We optimize mobile-first for fast load times with responsive web development that keeps visitors engaged.'
+      description: 'Speed isn\'t optional. It\'s revenue. We optimize mobile-first for fast load times with responsive web development that keeps visitors engaged.'
     },
     {
       title: 'Security by Default',
