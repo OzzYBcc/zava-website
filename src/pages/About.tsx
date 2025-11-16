@@ -236,12 +236,12 @@ export default function About() {
                 Trusted by Growing Businesses
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                We partner with <strong className="text-foreground">startups, scale-ups, e-commerce brands, SaaS companies, and B2B firms</strong> who need more than a website—they need a growth engine.
+                We partner with <strong className="text-foreground">startups, scale-ups, e-commerce brands, SaaS companies, and B2B firms</strong> who need more than a website, they need a growth engine.
               </p>
               <Card className="bg-background">
                 <CardContent className="pt-6">
                   <p className="text-lg italic text-muted-foreground mb-4">
-                    "Zavabuild delivered a SaaS dashboard 3x faster than our last agency—and it maintains optimized performance at 50K users."
+                    "Zavabuild delivered a SaaS dashboard 3x faster than our last agency and it maintains optimized performance at 50K users."
                   </p>
                   <p className="font-semibold text-foreground">— CTO, Tech Scale-up</p>
                 </CardContent>
