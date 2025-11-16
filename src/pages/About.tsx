@@ -23,7 +23,7 @@ export default function About() {
     },
     {
       title: 'Results Obsessed',
-      description: 'We measure success in conversions, engagement, and revenue—not just "looks good."'
+      description: 'We measure success in conversions, engagement, and revenue. Not just "looks good."'
     }
   ];
 
