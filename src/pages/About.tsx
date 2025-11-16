@@ -7,7 +7,7 @@ export default function About() {
   const coreValues = [
     {
       title: 'Performance-First',
-      description: 'Speed isn\'t optional—it\'s revenue. We guarantee 95+ Lighthouse scores with mobile-first, responsive web development that loads in under 2 seconds.'
+      description: 'Speed isn\'t optional—it\'s revenue. We optimize mobile-first for fast load times with responsive web development that keeps visitors engaged.'
     },
     {
       title: 'Security by Default',
@@ -32,7 +32,7 @@ export default function About() {
     'Tailored, Fast-Launch Model - Live in 2-4 weeks. No change-order chaos.',
     'In-House Execution Only - No outsourcing. Full control. Full accountability.',
     'Built for Growth, Not Just Launch - We don\'t disappear post-launch—we optimize, secure, and scale with you.',
-    'Performance Guarantee - Under 95 Lighthouse? We fix it free.'
+    'Performance Guarantee - Below optimal performance? We fix it free.'
   ];
 
   return (
@@ -76,7 +76,7 @@ export default function About() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm md:text-base">
             <div className="flex items-center gap-2">
               <CheckCircle className="w-5 h-5" />
-              <span>95+ Lighthouse scores on every launch</span>
+              <span>Optimized performance guaranteed on every launch</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-5 h-5" />
@@ -184,32 +184,16 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-12">
               <Card className="transition-all duration-300 hover:scale-105">
                 <CardContent className="pt-6">
-                  <div className="mb-6">
-                    <img
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
-                      alt="Christopher Bell"
-                      className="w-full h-64 object-cover rounded-lg"
-                      loading="lazy"
-                    />
-                  </div>
                   <h3 className="text-2xl font-bold mb-2 text-foreground">Christopher Bell</h3>
                   <p className="text-primary font-semibold mb-4">Co-founder / CEO</p>
                   <p className="text-muted-foreground">
-                    Leads clients into the digital world, supporting them every step of the way to scale using high-performance digital assets. Former lead dev at a SaaS scale-up that grew from 1K to 100K MAU. Obsessed with clean architecture and fast launches.
+                    Leads clients into the digital world, supporting them every step of the way to scale using high-performance digital assets. Architected high-performance web apps at a SaaS scale-up that grew from 1K to 100K MAU. Obsessed with clean architecture and fast launches.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="transition-all duration-300 hover:scale-105">
                 <CardContent className="pt-6">
-                  <div className="mb-6">
-                    <img
-                      src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80"
-                      alt="Aristomenis Georgiou"
-                      className="w-full h-64 object-cover rounded-lg"
-                      loading="lazy"
-                    />
-                  </div>
                   <h3 className="text-2xl font-bold mb-2 text-foreground">Aristomenis Georgiou</h3>
                   <p className="text-primary font-semibold mb-4">Co-founder / COO & UX Lead</p>
                   <p className="text-muted-foreground">
@@ -268,7 +252,7 @@ export default function About() {
               <Card className="bg-background">
                 <CardContent className="pt-6">
                   <p className="text-lg italic text-muted-foreground mb-4">
-                    "Zavabuild delivered a SaaS dashboard 3x faster than our last agency—and it still hits 98 Lighthouse at 50K users."
+                    "Zavabuild delivered a SaaS dashboard 3x faster than our last agency—and it maintains optimized performance at 50K users."
                   </p>
                   <p className="font-semibold text-foreground">— CTO, Tech Scale-up</p>
                 </CardContent>

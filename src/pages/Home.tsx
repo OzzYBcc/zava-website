@@ -42,7 +42,7 @@ export default function Home() {
       description: 'Slow sites bleed revenue—we provide website speed optimization that improves SEO, retention, and bottom-line results.',
       features: [
         'Advanced tactics: Image compression, caching, CDN configuration',
-        'Guaranteed 95+ Lighthouse scores to keep visitors engaged',
+        'Engineered for top-tier speed to keep visitors engaged',
         'Continuous monitoring for sustained speed excellence'
       ],
       cta: 'Optimize My Site Now'
@@ -113,7 +113,7 @@ export default function Home() {
       title: 'E-commerce Store for Professional Services Firm',
       challenge: 'Generic Shopify setup with high mobile bounce rates and low conversions.',
       solution: 'Headless commerce implementation, custom themes, and Core Web Vitals tuning.',
-      results: '42% lower bounce rate, 28% sales increase, 95+ Lighthouse score.'
+      results: '42% lower bounce rate, 28% sales increase, optimized performance.'
     },
     {
       title: 'B2B Lead Generation Site for Scale-up',
@@ -220,7 +220,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm md:text-base">
             <div className="flex items-center gap-2">
               <Check className="w-5 h-5" />
-              <span>Mobile-first, 95+ Lighthouse scores guaranteed</span>
+              <span>Mobile-first, optimized performance guaranteed</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-5 h-5" />
