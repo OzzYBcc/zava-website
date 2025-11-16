@@ -234,7 +234,6 @@ export default function Home() {
                 </p>
                 <p>
                   <strong className="text-foreground">Our mission:</strong> We build clean, conversion-focused websites and apps that deliver real ROI through fast load times, great user experience, seamless scaling, and smart SEO. We partner with ambitious businesses, from startups launching their first digital presence to established brands optimizing for growth, with technical precision and transparent results.
-
                 </p>
                 <div>
                   <p className="font-semibold text-foreground mb-3">What sets us apart:</p>
