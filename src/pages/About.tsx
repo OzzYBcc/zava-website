@@ -263,7 +263,7 @@ export default function About() {
                   We won't overpromise. But we will <strong className="text-foreground">over-deliver</strong> on speed, security, and scalability.
                 </p>
                 <p className="text-xl font-semibold text-foreground">
-                  When you choose Zavabuild, you're not buying a website—you're investing in a high-ROI digital asset that compounds with your business.
+                  When you choose Zavabuild, you're not buying a website. You're investing in a high-ROI digital asset that compounds with your business.
                 </p>
               </div>
             </div>
