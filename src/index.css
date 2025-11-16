@@ -81,6 +81,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 @media (min-width: 1024px) {
   body {
     font-size: 18px;

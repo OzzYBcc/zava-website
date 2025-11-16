@@ -4,10 +4,22 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import FadeInSection from '@/components/FadeInSection';
 import { ArrowRight, Search, Pencil, Code, Rocket, TrendingUp, Check, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useRef } from 'react';
 
 export default function Home() {
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+    }
+  };
   const services = [
     {
       title: 'Custom Website Design & Development',
@@ -280,9 +292,22 @@ export default function Home() {
             </div>
 
             <div className="relative max-w-7xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {services.slice(currentServiceIndex, currentServiceIndex + 3).map((service, index) => (
-                  <Card key={currentServiceIndex + index} className="transition-all duration-300 hover:scale-105">
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={scrollLeft}
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 h-12 w-12 hidden md:flex"
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </Button>
+
+              <div
+                ref={scrollContainerRef}
+                className="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar px-12 md:px-16"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              >
+                {services.map((service, index) => (
+                  <Card key={index} className="min-w-[300px] md:min-w-[350px] lg:min-w-[380px] snap-start transition-all duration-300 hover:scale-105 flex-shrink-0">
                     <CardHeader>
                       <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
                       <CardDescription className="text-base">{service.description}</CardDescription>
@@ -310,42 +335,14 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="flex justify-center items-center gap-4 mt-8">
-                <Button
-                  variant="outline"
-                  size="icon"
-                  onClick={() => setCurrentServiceIndex(Math.max(0, currentServiceIndex - 3))}
-                  disabled={currentServiceIndex === 0}
-                  className="h-12 w-12"
-                >
-                  <ChevronLeft className="h-6 w-6" />
-                </Button>
-
-                <div className="flex gap-2">
-                  {Array.from({ length: Math.ceil(services.length / 3) }).map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentServiceIndex(index * 3)}
-                      className={`h-2 rounded-full transition-all ${
-                        currentServiceIndex === index * 3
-                          ? 'w-8 bg-primary'
-                          : 'w-2 bg-muted-foreground/30'
-                      }`}
-                      aria-label={`Go to page ${index + 1}`}
-                    />
-                  ))}
-                </div>
-
-                <Button
-                  variant="outline"
-                  size="icon"
-                  onClick={() => setCurrentServiceIndex(Math.min(services.length - 3, currentServiceIndex + 3))}
-                  disabled={currentServiceIndex >= services.length - 3}
-                  className="h-12 w-12"
-                >
-                  <ChevronRight className="h-6 w-6" />
-                </Button>
-              </div>
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={scrollRight}
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 h-12 w-12 hidden md:flex"
+              >
+                <ChevronRight className="h-6 w-6" />
+              </Button>
             </div>
           </div>
         </section>
