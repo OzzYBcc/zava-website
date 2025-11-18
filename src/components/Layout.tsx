@@ -106,21 +106,21 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
         {mobileMenuOpen && (
           <div className="md:hidden bg-background border-t border-border transition-colors duration-300">
-            <div className="container mx-auto px-4 py-6 flex flex-col items-center gap-6">
+            <div className="container mx-auto px-4 py-4 flex flex-col items-center gap-3">
               {navLinks.map((link) => (
                 <Link
                   key={link.to}
                   to={link.to}
                   onClick={(e) => handleNavClick(e, link.to)}
-                  className="text-foreground hover:text-muted-foreground transition-colors duration-300 text-lg font-medium"
+                  className="text-foreground hover:text-muted-foreground transition-colors duration-300 text-base font-medium"
                 >
                   {link.label}
                 </Link>
               ))}
-              <div className="w-full max-w-xs pt-4 border-t border-border">
+              <div className="w-full max-w-xs pt-3 mt-1 border-t border-border">
                 <Button
                   onClick={() => setQuestionnaireOpen(true)}
-                  className="bg-primary text-primary-foreground hover:opacity-90 transition-opacity duration-300 w-full h-12 text-base"
+                  className="bg-primary text-primary-foreground hover:opacity-90 transition-opacity duration-300 w-full h-11 text-base"
                 >
                   Start Project
                 </Button>
