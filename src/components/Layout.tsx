@@ -112,8 +112,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   key={link.to}
                   to={link.to}
                   onClick={(e) => handleNavClick(e, link.to)}
-                  className="text-foreground hover:text-muted-foreground transition-colors duration-300 text-base font-medium"
+                  className="text-foreground hover:text-muted-foreground transition-colors duration-300 text-base font-medium flex items-center gap-2"
                 >
+                  <span className="w-1.5 h-1.5 rounded-full bg-foreground"></span>
                   {link.label}
                 </Link>
               ))}
