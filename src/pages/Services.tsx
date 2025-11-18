@@ -368,7 +368,7 @@ export default function Services() {
                 Ready to Build Something Serious?
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-                Tell us where you want to go. We'll get you there, faster, cleaner, and stronger.
+                Tell us where you want to go. We'll get you there: faster, cleaner, and stronger.
               </p>
               <Button
                 size="lg"
