@@ -203,7 +203,7 @@ export default function Services() {
                 High-Performance Web Solutions Built for Real Growth
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-                No off-the-shelf packages. We build exactly what your business needs — lightning-fast marketing sites, scalable web apps, or anything in between — all engineered for speed, security, and lasting results.
+                No off-the-shelf packages. We build exactly what your business needs: lightning-fast marketing sites, scalable web apps, or anything in between. All engineered for speed, security, and lasting results.
               </p>
               <div className="flex flex-wrap gap-4 justify-center mb-8">
                 <div className="flex items-center gap-2 text-sm md:text-base text-muted-foreground">
@@ -368,7 +368,7 @@ export default function Services() {
                 Ready to Build Something Serious?
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-                Tell us where you want to go. We'll get you there — faster, cleaner, and stronger.
+                Tell us where you want to go. We'll get you there, faster, cleaner, and stronger.
               </p>
               <Button
                 size="lg"
