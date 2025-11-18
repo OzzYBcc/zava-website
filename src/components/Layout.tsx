@@ -103,22 +103,25 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
         {mobileMenuOpen && (
           <div className="md:hidden bg-background border-t border-border transition-colors duration-300">
-            <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-4 py-6 flex flex-col items-center gap-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.to}
                   to={link.to}
                   onClick={(e) => handleNavClick(e, link.to)}
-                  className="text-foreground hover:text-muted-foreground transition-colors duration-300 py-2 text-lg"
+                  className="text-foreground hover:text-muted-foreground transition-colors duration-300 text-lg font-medium"
                 >
                   {link.label}
                 </Link>
               ))}
-              <div className="flex items-center gap-3 pt-2">
-                <ThemeToggle theme={theme} onToggle={toggleTheme} />
-                <Button onClick={() => setQuestionnaireOpen(true)} className="bg-primary text-primary-foreground hover:opacity-90 transition-opacity duration-300 flex-1 h-11">
+              <div className="w-full max-w-xs pt-4 border-t border-border flex flex-col gap-4 items-center">
+                <Button
+                  onClick={() => setQuestionnaireOpen(true)}
+                  className="bg-primary text-primary-foreground hover:opacity-90 transition-opacity duration-300 w-full h-12 text-base"
+                >
                   Start Project
                 </Button>
+                <ThemeToggle theme={theme} onToggle={toggleTheme} />
               </div>
             </div>
           </div>
