@@ -92,13 +92,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </Button>
           </div>
 
-          <button
-            className="md:hidden p-2 text-foreground transition-colors duration-300"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle theme={theme} onToggle={toggleTheme} />
+            <button
+              className="p-2 text-foreground transition-colors duration-300"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </nav>
 
         {mobileMenuOpen && (
@@ -114,14 +117,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   {link.label}
                 </Link>
               ))}
-              <div className="w-full max-w-xs pt-4 border-t border-border flex flex-col gap-4 items-center">
+              <div className="w-full max-w-xs pt-4 border-t border-border">
                 <Button
                   onClick={() => setQuestionnaireOpen(true)}
                   className="bg-primary text-primary-foreground hover:opacity-90 transition-opacity duration-300 w-full h-12 text-base"
                 >
                   Start Project
                 </Button>
-                <ThemeToggle theme={theme} onToggle={toggleTheme} />
               </div>
             </div>
           </div>
