@@ -113,7 +113,7 @@ export default function Contact() {
                     <Phone size={24} />
                   </div>
                   <CardTitle>Phone</CardTitle>
-                  <CardDescription>+44 078 4082 7694</CardDescription>
+                  <CardDescription>+44 78 4082 7694</CardDescription>
                 </CardHeader>
               </Card>
             </FadeInSection>
