@@ -14,10 +14,6 @@ const pageData: Record<string, { title: string; description: string }> = {
     title: 'Services | Zavabuild',
     description: 'Professional web development services including custom websites, web applications, and e-commerce solutions.'
   },
-  '/portfolio': {
-    title: 'Portfolio | Web Design, Apps & E-Commerce Projects | Zavabuild',
-    description: 'Real results for SaaS, e-commerce, and B2B clients: faster sites, higher conversions, seamless scaling. See our latest custom web and app projects.'
-  },
   '/contact': {
     title: 'Contact | Start Your Custom Web Project | Zavabuild',
     description: 'Ready for a faster, more secure, conversion-driven website or app? Tell us your goals — get a tailored proposal and free performance audit in 24 hours.'

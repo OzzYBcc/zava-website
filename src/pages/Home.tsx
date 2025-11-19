@@ -3,7 +3,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import FadeInSection from '@/components/FadeInSection';
 import { ArrowRight, Search, Pencil, Code, Rocket, TrendingUp, Check, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 
 export default function Home() {
@@ -116,26 +115,6 @@ export default function Home() {
     }
   ];
 
-  const caseStudies = [
-    {
-      title: 'SaaS Dashboard for Tech Startup',
-      challenge: 'Legacy platform with slow loads and poor mobile UX, causing 40% signup drop-off.',
-      solution: 'Full custom web app builder rebuild with responsive web development, API integrations, and speed optimization.',
-      results: '50% faster loads, 35% higher user retention, live in 3 weeks.'
-    },
-    {
-      title: 'E-commerce Store for Professional Services Firm',
-      challenge: 'Generic Shopify setup with high mobile bounce rates and low conversions.',
-      solution: 'Headless commerce implementation, custom themes, and Core Web Vitals tuning.',
-      results: '42% lower bounce rate, 28% sales increase, optimized performance.'
-    },
-    {
-      title: 'B2B Lead Generation Site for Scale-up',
-      challenge: 'Scalability limits and security gaps blocking expansion.',
-      solution: 'End-to-end custom website development with robust architecture and ongoing maintenance.',
-      results: 'Handled 5x traffic surge seamlessly, 30% more qualified leads, delivered under budget.'
-    }
-  ];
 
   const testimonials = [
     {
@@ -382,52 +361,6 @@ export default function Home() {
         </section>
       </FadeInSection>
 
-      <FadeInSection>
-        <section className="py-24 bg-secondary transition-colors duration-300">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="max-w-5xl mx-auto text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-                Case Studies / Portfolio Teaser
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Proven results across industries
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-              {caseStudies.map((study, index) => (
-                <Card key={index} className="transition-all duration-300 hover:scale-105">
-                  <CardHeader>
-                    <CardTitle className="text-xl mb-4">{study.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div>
-                      <p className="font-semibold text-foreground mb-2">Challenge:</p>
-                      <p className="text-sm text-muted-foreground">{study.challenge}</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-foreground mb-2">Solution:</p>
-                      <p className="text-sm text-muted-foreground">{study.solution}</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-foreground mb-2">Results:</p>
-                      <p className="text-sm text-primary font-semibold">{study.results}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            <div className="text-center mt-12">
-              <Link to="/portfolio">
-                <Button size="lg">
-                  View Full Portfolio <ArrowRight className="ml-2" />
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
-      </FadeInSection>
 
       <FadeInSection>
         <section className="py-24 bg-background transition-colors duration-300">
