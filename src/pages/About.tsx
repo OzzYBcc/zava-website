@@ -176,7 +176,7 @@ export default function About() {
                   <h3 className="text-2xl font-bold mb-2 text-foreground">Christopher Bell</h3>
                   <p className="text-primary font-semibold mb-4">Co-founder / CEO</p>
                   <p className="text-muted-foreground">
-                    Leads clients into the digital world, supporting them every step of the way to scale using high-performance digital assets. Architected high-performance web apps at a SaaS scale-up that grew from 1K to 100K MAU. Obsessed with clean architecture and fast launches.
+                    Leads clients into the digital world, supporting them every step of the way to scale using high-performance digital assets. Obsessed with clean architecture and fast launches.
                   </p>
                 </CardContent>
               </Card>
