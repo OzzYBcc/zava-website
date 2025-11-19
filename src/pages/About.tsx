@@ -186,7 +186,7 @@ export default function About() {
                   <h3 className="text-2xl font-bold mb-2 text-foreground">Aristomenis Georgiou</h3>
                   <p className="text-primary font-semibold mb-4">Co-founder / COO & UX Lead</p>
                   <p className="text-muted-foreground">
-                    UI/UX specialist with 10+ years blending conversion psychology and pixel-perfect design. Led redesigns that boosted client conversions by 40%+.
+                    UI/UX specialist with 3+ years blending conversion psychology and pixel-perfect design. Led redesigns that boosted client conversions by 40%+.
                   </p>
                 </CardContent>
               </Card>
