@@ -48,7 +48,7 @@ export default function About() {
             We Build Digital Assets That<br />Grow Your Business
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto">
-            High-performance websites and web apps engineered for speed, security, and scale—delivered fast, with zero compromises.
+            High-performance websites and web apps engineered for speed, security, and scale. Delivered fast, with zero compromises.
           </p>
           <div className="flex justify-center items-center mb-8">
             <Button
