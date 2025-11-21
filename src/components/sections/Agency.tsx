@@ -47,7 +47,8 @@ export default function Agency() {
            <img
              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200"
              alt="Zava Architecture"
-             className="object-cover w-full h-full opacity-80 hover:scale-105 transition-transform duration-[1.5s]"
+             style={{ transitionDuration: '1500ms' }}
+             className="object-cover w-full h-full opacity-80 hover:scale-105 transition-transform"
            />
         </motion.div>
       </div>

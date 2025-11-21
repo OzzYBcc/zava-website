@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -12,11 +14,15 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
+
   const navLinks = [
-    { name: 'Work', href: '#work' },
-    { name: 'Services', href: '#services' },
-    { name: 'Agency', href: '#agency' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Home', to: '/' },
+    { name: 'About', to: '/about' },
+    { name: 'Services', to: '/services' },
+    { name: 'Contact', to: '/contact' }
   ];
 
   const handleStartProject = () => {
@@ -37,20 +43,20 @@ export default function Navbar() {
         }`}
       >
         <div className="px-6 md:px-12 lg:px-24 flex justify-between items-center">
-          <a href="#" className="font-serif text-2xl md:text-3xl text-[#1a1a1a] tracking-tight font-medium z-50 relative">
+          <Link to="/" className="font-serif text-2xl md:text-3xl text-[#1a1a1a] tracking-tight font-medium z-50 relative">
             Zava.
-          </a>
+          </Link>
 
           <div className="hidden md:flex space-x-12 items-center font-sans text-sm tracking-widest uppercase text-[#1a1a1a]">
             {navLinks.map((item) => (
-              <a key={item.name} href={item.href} className="group relative overflow-hidden">
+              <Link key={item.name} to={item.to} className="group relative overflow-hidden">
                 <span className="block transition-transform duration-500 group-hover:-translate-y-full">
                   {item.name}
                 </span>
                 <span className="absolute top-0 left-0 block translate-y-full transition-transform duration-500 group-hover:translate-y-0 text-[#8c8c8c]">
                   {item.name}
                 </span>
-              </a>
+              </Link>
             ))}
             <button
               onClick={handleStartProject}
@@ -77,14 +83,14 @@ export default function Navbar() {
         >
           <div className="flex flex-col space-y-8 font-serif text-4xl text-[#1a1a1a]">
             {navLinks.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.to}
                 onClick={() => setMobileMenuOpen(false)}
                 className="border-b border-[#1a1a1a]/10 pb-4"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
         </motion.div>

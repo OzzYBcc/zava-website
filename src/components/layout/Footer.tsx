@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
@@ -19,9 +20,10 @@ export default function Footer() {
         <div className="flex gap-12 md:gap-24 font-sans text-sm uppercase tracking-widest">
           <div className="flex flex-col gap-4">
             <span className="opacity-40 mb-2">Sitemap</span>
-            <a href="#work" className="hover:opacity-60 transition-opacity">Work</a>
-            <a href="#services" className="hover:opacity-60 transition-opacity">Services</a>
-            <a href="#agency" className="hover:opacity-60 transition-opacity">Agency</a>
+            <Link to="/" className="hover:opacity-60 transition-opacity">Home</Link>
+            <Link to="/about" className="hover:opacity-60 transition-opacity">About</Link>
+            <Link to="/services" className="hover:opacity-60 transition-opacity">Services</Link>
+            <Link to="/contact" className="hover:opacity-60 transition-opacity">Contact</Link>
           </div>
           <div className="flex flex-col gap-4">
             <span className="opacity-40 mb-2">Socials</span>
