@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { motion } from 'framer-motion';
 import FadeInSection from '@/components/FadeInSection';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import {
   Palette,
@@ -193,173 +193,197 @@ export default function Services() {
   }, []);
 
   return (
-    <div className="w-full bg-[#f9f9f9]">
-      <section className="min-h-[60vh] flex items-center justify-center px-6 md:px-12 lg:px-24 py-32 bg-[#f9f9f9]">
-        <div className="max-w-5xl text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="font-serif text-5xl md:text-6xl lg:text-7xl text-[#1a1a1a] mb-8 leading-tight"
-          >
-            High-Performance Web Solutions Built for Real Growth
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-sans text-lg md:text-xl text-[#1a1a1a]/70 mb-12 max-w-3xl mx-auto leading-relaxed"
-          >
-            No off-the-shelf packages. We build exactly what your business needs: lightning-fast marketing sites, scalable web apps, or anything in between. All engineered for speed, security, and lasting results.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <Button
-              size="lg"
-              className="bg-[#1a1a1a] text-[#f9f9f9] hover:bg-[#1a1a1a]/90 px-8 py-6 text-base font-sans"
-              onClick={() => {
-                const event = new CustomEvent('openQuestionnaire');
-                window.dispatchEvent(event);
-              }}
-            >
-              Start Your Project
-            </Button>
-          </motion.div>
+    <div className="w-full">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-background transition-colors duration-300">
+        <div className="container mx-auto px-4 lg:px-8">
+          <FadeInSection>
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground leading-tight">
+                High-Performance Web Solutions Built for Real Growth
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
+                No off-the-shelf packages. We build exactly what your business needs: lightning-fast marketing sites, scalable web apps, or anything in between. All engineered for speed, security, and lasting results.
+              </p>
+              <div className="flex flex-wrap gap-4 justify-center mb-8">
+                <div className="flex items-center gap-2 text-sm md:text-base text-muted-foreground">
+                  <CheckCircle2 className="h-5 w-5 text-primary" />
+                  <span>Optimized performance guaranteed</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm md:text-base text-muted-foreground">
+                  <CheckCircle2 className="h-5 w-5 text-primary" />
+                  <span>Tailored solutions, launch in 2-4 weeks</span>
+                </div>
+              </div>
+              <Button
+                size="lg"
+                className="text-base px-8"
+                onClick={() => {
+                  const event = new CustomEvent('openQuestionnaire');
+                  window.dispatchEvent(event);
+                }}
+              >
+                Start Your Project
+              </Button>
+            </div>
+          </FadeInSection>
         </div>
       </section>
 
-      <FadeInSection>
-        <section className="px-6 md:px-12 lg:px-24 py-24 md:py-32 bg-[#f9f9f9]">
-          <div className="max-w-6xl mx-auto">
+      {/* What We Do Section */}
+      <section className="py-20 bg-muted/30 transition-colors duration-300">
+        <div className="container mx-auto px-4 lg:px-8">
+          <FadeInSection>
             <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl md:text-5xl text-[#1a1a1a] mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
                 What We Do
               </h2>
-              <p className="font-sans text-lg text-[#1a1a1a]/60 max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Comprehensive solutions tailored to your business needs
               </p>
             </div>
+          </FadeInSection>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {whatWeDo.map((service, index) => (
-                <div key={index} className="border border-[#1a1a1a]/10 p-8 hover:border-[#1a1a1a]/30 transition-all duration-300">
-                  <service.icon className="h-10 w-10 text-[#1a1a1a] mb-4" />
-                  <h3 className="font-serif text-xl text-[#1a1a1a] mb-3">{service.title}</h3>
-                  <p className="font-sans text-[#1a1a1a]/70 mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2 font-sans text-sm text-[#1a1a1a]/70">
-                        <CheckCircle2 className="h-4 w-4 text-[#1a1a1a] mt-0.5 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            {whatWeDo.map((service, index) => (
+              <FadeInSection key={index}>
+                <Card className="h-full hover:shadow-lg transition-all duration-300">
+                  <CardHeader>
+                    <div className="mb-4">
+                      <service.icon className="h-10 w-10 text-primary" />
+                    </div>
+                    <CardTitle className="text-xl mb-3">{service.title}</CardTitle>
+                    <CardDescription className="text-base leading-relaxed">
+                      {service.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                          <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </FadeInSection>
+            ))}
           </div>
-        </section>
-      </FadeInSection>
+        </div>
+      </section>
 
-      <FadeInSection>
-        <section className="px-6 md:px-12 lg:px-24 py-24 md:py-32 bg-[#f5f5f5]">
-          <div className="max-w-6xl mx-auto">
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-background transition-colors duration-300">
+        <div className="container mx-auto px-4 lg:px-8">
+          <FadeInSection>
             <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl md:text-5xl text-[#1a1a1a] mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
                 Why Businesses Choose Zavabuild
               </h2>
             </div>
+          </FadeInSection>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-              {whyChooseUs.map((item, index) => (
-                <div key={index} className="text-center">
-                  <item.icon className="h-12 w-12 text-[#1a1a1a] mx-auto mb-4" />
-                  <h3 className="font-serif text-lg text-[#1a1a1a] mb-2">{item.title}</h3>
-                  <p className="font-sans text-sm text-[#1a1a1a]/70">{item.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+            {whyChooseUs.map((item, index) => (
+              <FadeInSection key={index}>
+                <div className="text-center p-6 rounded-lg hover:bg-muted/30 transition-colors duration-300">
+                  <item.icon className="h-12 w-12 text-primary mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold mb-2 text-foreground">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
                 </div>
-              ))}
-            </div>
+              </FadeInSection>
+            ))}
           </div>
-        </section>
-      </FadeInSection>
+        </div>
+      </section>
 
-      <FadeInSection>
-        <section className="px-6 md:px-12 lg:px-24 py-24 md:py-32 bg-[#f9f9f9]">
-          <div className="max-w-6xl mx-auto">
+      {/* How We Work Section */}
+      <section className="py-20 bg-muted/30 transition-colors duration-300">
+        <div className="container mx-auto px-4 lg:px-8">
+          <FadeInSection>
             <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl md:text-5xl text-[#1a1a1a] mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
                 How We Work
               </h2>
             </div>
+          </FadeInSection>
 
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
               {howWeWork.map((step, index) => (
-                <div key={index} className="text-center">
-                  <div className="relative mb-4">
-                    <div className="w-20 h-20 mx-auto border-2 border-[#1a1a1a] flex items-center justify-center">
-                      <step.icon className="h-10 w-10 text-[#1a1a1a]" />
+                <FadeInSection key={index}>
+                  <div className="text-center">
+                    <div className="relative mb-4">
+                      <div className="w-20 h-20 mx-auto rounded-full bg-primary/10 flex items-center justify-center">
+                        <step.icon className="h-10 w-10 text-primary" />
+                      </div>
+                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xs font-bold">
+                        {step.number}
+                      </div>
                     </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#1a1a1a] text-[#f9f9f9] flex items-center justify-center font-sans text-xs font-bold">
-                      {step.number}
-                    </div>
+                    <h3 className="text-lg font-semibold mb-2 text-foreground">{step.title}</h3>
+                    <p className="text-sm text-muted-foreground">{step.description}</p>
                   </div>
-                  <h3 className="font-serif text-lg text-[#1a1a1a] mb-2">{step.title}</h3>
-                  <p className="font-sans text-sm text-[#1a1a1a]/70">{step.description}</p>
-                </div>
+                </FadeInSection>
               ))}
             </div>
           </div>
-        </section>
-      </FadeInSection>
+        </div>
+      </section>
 
-      <FadeInSection>
-        <section className="px-6 md:px-12 lg:px-24 py-24 md:py-32 bg-[#f5f5f5]">
-          <div className="max-w-6xl mx-auto">
+      {/* Engagement Options Section */}
+      <section className="py-20 bg-background transition-colors duration-300">
+        <div className="container mx-auto px-4 lg:px-8">
+          <FadeInSection>
             <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl md:text-5xl text-[#1a1a1a] mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
                 Engagement Options
               </h2>
             </div>
+          </FadeInSection>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {engagementOptions.map((option, index) => (
-                <div key={index} className="border border-[#1a1a1a]/10 p-8 hover:border-[#1a1a1a]/30 transition-all duration-300">
-                  <h3 className="font-serif text-lg text-[#1a1a1a] mb-2">{option.title}</h3>
-                  <p className="font-sans text-[#1a1a1a]/70">{option.description}</p>
-                </div>
-              ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {engagementOptions.map((option, index) => (
+              <FadeInSection key={index}>
+                <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+                  <CardHeader>
+                    <CardTitle className="text-lg mb-2">{option.title}</CardTitle>
+                    <CardDescription>{option.description}</CardDescription>
+                  </CardHeader>
+                </Card>
+              </FadeInSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="py-20 bg-muted/30 transition-colors duration-300">
+        <div className="container mx-auto px-4 lg:px-8">
+          <FadeInSection>
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+                Ready to Build Something Serious?
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
+                Tell us where you want to go. We'll get you there: faster, cleaner, and stronger.
+              </p>
+              <Button
+                size="lg"
+                className="text-base px-8"
+                onClick={() => {
+                  const event = new CustomEvent('openQuestionnaire');
+                  window.dispatchEvent(event);
+                }}
+              >
+                Start Your Project
+              </Button>
             </div>
-          </div>
-        </section>
-      </FadeInSection>
-
-      <FadeInSection>
-        <section className="px-6 md:px-12 lg:px-24 py-24 md:py-32 bg-[#1a1a1a] text-[#f9f9f9]">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="font-serif text-4xl md:text-5xl mb-6">
-              Ready to Build Something Serious?
-            </h2>
-            <p className="font-sans text-lg md:text-xl text-[#f9f9f9]/70 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Tell us where you want to go. We'll get you there: faster, cleaner, and stronger.
-            </p>
-            <Button
-              size="lg"
-              className="bg-[#f9f9f9] text-[#1a1a1a] hover:bg-[#f9f9f9]/90 px-8 py-6 text-base font-sans"
-              onClick={() => {
-                const event = new CustomEvent('openQuestionnaire');
-                window.dispatchEvent(event);
-              }}
-            >
-              Start Your Project
-            </Button>
-          </div>
-        </section>
-      </FadeInSection>
+          </FadeInSection>
+        </div>
+      </section>
     </div>
   );
 }

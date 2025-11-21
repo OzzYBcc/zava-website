@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import FadeInSection from '@/components/FadeInSection';
@@ -37,33 +36,24 @@ export default function About() {
   ];
 
   return (
-    <div className="w-full bg-[#f9f9f9]">
-      <section className="min-h-[70vh] flex items-center justify-center px-6 md:px-12 lg:px-24 py-32 bg-[#f9f9f9]">
-        <div className="max-w-5xl text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="font-serif text-5xl md:text-6xl lg:text-7xl text-[#1a1a1a] mb-8 leading-tight"
-          >
-            We Build Digital Assets That Grow Your Business
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-sans text-lg md:text-xl text-[#1a1a1a]/70 mb-12 max-w-3xl mx-auto leading-relaxed"
-          >
+    <div className="w-full">
+      <section
+        className="relative min-h-[60vh] flex items-center justify-center bg-cover bg-center"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80)',
+        }}
+      >
+        <div className="container mx-auto px-4 lg:px-8 text-center text-white z-10 py-24">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+            We Build Digital Assets That<br />Grow Your Business
+          </h1>
+          <p className="text-lg md:text-xl lg:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto">
             High-performance websites and web apps engineered for speed, security, and scale. Delivered fast, with zero compromises.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
+          </p>
+          <div className="flex justify-center items-center mb-8">
             <Button
               size="lg"
-              className="bg-[#1a1a1a] text-[#f9f9f9] hover:bg-[#1a1a1a]/90 px-8 py-6 text-base font-sans"
+              className="bg-white text-black hover:bg-gray-100 text-lg px-8 py-6"
               onClick={() => {
                 const event = new CustomEvent('openQuestionnaire');
                 window.dispatchEvent(event);
@@ -71,81 +61,97 @@ export default function About() {
             >
               Start Your Project <ArrowRight className="ml-2" />
             </Button>
-          </motion.div>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm md:text-base">
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-5 h-5" />
+              <span>Optimized performance guaranteed on every launch</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-5 h-5" />
+              <span>Tailored solutions, 2-4 week delivery</span>
+            </div>
+          </div>
         </div>
       </section>
 
       <FadeInSection>
-        <section className="px-6 md:px-12 lg:px-24 py-24 md:py-32 bg-[#f9f9f9]">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl text-[#1a1a1a] mb-8">
-              Our Mission
-            </h2>
-            <div className="space-y-6 font-sans text-lg text-[#1a1a1a]/70 leading-relaxed">
-              <p>
-                We don't just build websites. We create <strong className="text-[#1a1a1a]">custom digital solutions</strong> that convert visitors, rank higher, and scale effortlessly, without the headaches of freelancers or bloated agencies.
-              </p>
-              <p>
-                Zavabuild exists to give SMBs in e-commerce, SaaS, professional services, and B2B the <strong className="text-[#1a1a1a]">reliable, high-performance web presence</strong> they deserve. No templates. No outsourcing. Just clean code, fast load times, and measurable ROI.
-              </p>
+        <section className="py-24 bg-background transition-colors duration-300">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-foreground">
+                Our Mission
+              </h2>
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  We don't just build websites. We create <strong className="text-foreground">custom digital solutions</strong> that convert visitors, rank higher, and scale effortlessly, without the headaches of freelancers or bloated agencies.
+                </p>
+                <p>
+                  Zavabuild exists to give SMBs in e-commerce, SaaS, professional services, and B2B the <strong className="text-foreground">reliable, high-performance web presence</strong> they deserve. No templates. No outsourcing. Just clean code, fast load times, and measurable ROI.
+                </p>
+              </div>
             </div>
           </div>
         </section>
       </FadeInSection>
 
       <FadeInSection>
-        <section className="px-6 md:px-12 lg:px-24 py-24 md:py-32 bg-[#f5f5f5]">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl text-[#1a1a1a] mb-8">
-              Our Story
-            </h2>
-            <div className="space-y-6 font-sans text-lg text-[#1a1a1a]/70 leading-relaxed">
-              <p>
-                Most agencies cut corners or outsource critical work. We saw the gap and closed it.
-              </p>
-              <p>
-                Founded by developers and designers tired of fragile, slow, overpriced builds, Zavabuild was created to deliver <strong className="text-[#1a1a1a]">web solutions as ambitious as our clients</strong>. From day one, we've obsessed over three things:
-              </p>
-              <ul className="space-y-4 ml-6">
-                <li className="flex gap-4">
-                  <Zap className="w-6 h-6 text-[#1a1a1a] mt-1 flex-shrink-0" />
-                  <span><strong className="text-[#1a1a1a]">Speed</strong> that retains users</span>
-                </li>
-                <li className="flex gap-4">
-                  <Shield className="w-6 h-6 text-[#1a1a1a] mt-1 flex-shrink-0" />
-                  <span><strong className="text-[#1a1a1a]">Security</strong> that protects growth</span>
-                </li>
-                <li className="flex gap-4">
-                  <TrendingUp className="w-6 h-6 text-[#1a1a1a] mt-1 flex-shrink-0" />
-                  <span><strong className="text-[#1a1a1a]">Scalability</strong> that eliminates future rebuilds</span>
-                </li>
-              </ul>
-              <p className="font-semibold text-[#1a1a1a] text-xl pt-4">
-                Every line of code, every design decision, every optimization is built for long-term impact.
-              </p>
+        <section className="py-24 bg-secondary transition-colors duration-300">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-foreground">
+                Our Story
+              </h2>
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  Most agencies cut corners or outsource critical work. We saw the gap and closed it.
+                </p>
+                <p>
+                  Founded by developers and designers tired of fragile, slow, overpriced builds, Zavabuild was created to deliver <strong className="text-foreground">web solutions as ambitious as our clients</strong>. From day one, we've obsessed over three things:
+                </p>
+                <ul className="space-y-3 ml-6">
+                  <li className="flex gap-2">
+                    <Zap className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                    <span><strong className="text-foreground">Speed</strong> that retains users</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <Shield className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                    <span><strong className="text-foreground">Security</strong> that protects growth</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <TrendingUp className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                    <span><strong className="text-foreground">Scalability</strong> that eliminates future rebuilds</span>
+                  </li>
+                </ul>
+                <p className="font-semibold text-foreground text-xl">
+                  Every line of code, every design decision, every optimization is built for long-term impact.
+                </p>
+              </div>
             </div>
           </div>
         </section>
       </FadeInSection>
 
       <FadeInSection>
-        <section className="px-6 md:px-12 lg:px-24 py-24 md:py-32 bg-[#f9f9f9]">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl md:text-5xl text-[#1a1a1a] mb-6">
+        <section className="py-24 bg-background transition-colors duration-300">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="max-w-5xl mx-auto text-center mb-16">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
                 Our Core Values
               </h2>
-              <p className="font-sans text-lg text-[#1a1a1a]/60">
+              <p className="text-lg text-muted-foreground">
                 The principles that guide everything we do
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {coreValues.map((value, index) => (
-                <div key={index} className="border border-[#1a1a1a]/10 p-8 hover:border-[#1a1a1a]/30 transition-all duration-300">
-                  <h3 className="font-serif text-xl text-[#1a1a1a] mb-4">{value.title}</h3>
-                  <p className="font-sans text-[#1a1a1a]/70">{value.description}</p>
-                </div>
+                <Card key={index} className="transition-all duration-300 hover:scale-105">
+                  <CardContent className="pt-6">
+                    <h3 className="text-xl font-bold mb-4 text-foreground">{value.title}</h3>
+                    <p className="text-muted-foreground">{value.description}</p>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>
@@ -153,36 +159,40 @@ export default function About() {
       </FadeInSection>
 
       <FadeInSection>
-        <section className="px-6 md:px-12 lg:px-24 py-24 md:py-32 bg-[#f5f5f5]">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl md:text-5xl text-[#1a1a1a] mb-6">
+        <section className="py-24 bg-secondary transition-colors duration-300">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="max-w-5xl mx-auto text-center mb-16">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
                 The Team Behind Zavabuild
               </h2>
-              <p className="font-sans text-lg text-[#1a1a1a]/70 mb-8">
-                We're a lean, in-house team of experts who code, design, and optimize. <strong className="text-[#1a1a1a]">No freelancers, no handoffs.</strong>
+              <p className="text-lg text-muted-foreground mb-8">
+                We're a lean, in-house team of experts who code, design, and optimize.<strong>No freelancers, no handoffs.</strong>
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-              <div className="border border-[#1a1a1a]/10 p-8">
-                <h3 className="font-serif text-2xl text-[#1a1a1a] mb-2">Christopher Bell</h3>
-                <p className="font-sans text-sm uppercase tracking-widest text-[#8c8c8c] mb-4">Co-founder / CEO</p>
-                <p className="font-sans text-[#1a1a1a]/70">
-                  Leads clients into the digital world, supporting them every step of the way to scale using high-performance digital assets. Obsessed with clean architecture and fast launches.
-                </p>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-12">
+              <Card className="transition-all duration-300 hover:scale-105">
+                <CardContent className="pt-6">
+                  <h3 className="text-2xl font-bold mb-2 text-foreground">Christopher Bell</h3>
+                  <p className="text-primary font-semibold mb-4">Co-founder / CEO</p>
+                  <p className="text-muted-foreground">
+                    Leads clients into the digital world, supporting them every step of the way to scale using high-performance digital assets. Obsessed with clean architecture and fast launches.
+                  </p>
+                </CardContent>
+              </Card>
 
-              <div className="border border-[#1a1a1a]/10 p-8">
-                <h3 className="font-serif text-2xl text-[#1a1a1a] mb-2">Aristomenis Georgiou</h3>
-                <p className="font-sans text-sm uppercase tracking-widest text-[#8c8c8c] mb-4">Co-founder / COO & UX Lead</p>
-                <p className="font-sans text-[#1a1a1a]/70">
-                  UI/UX specialist with 3+ years blending conversion psychology and pixel-perfect design. Led redesigns that boosted client conversions by 40%+.
-                </p>
-              </div>
+              <Card className="transition-all duration-300 hover:scale-105">
+                <CardContent className="pt-6">
+                  <h3 className="text-2xl font-bold mb-2 text-foreground">Aristomenis Georgiou</h3>
+                  <p className="text-primary font-semibold mb-4">Co-founder / COO & UX Lead</p>
+                  <p className="text-muted-foreground">
+                    UI/UX specialist with 3+ years blending conversion psychology and pixel-perfect design. Led redesigns that boosted client conversions by 40%+.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
 
-            <p className="text-center font-sans text-xl font-semibold text-[#1a1a1a]">
+            <p className="text-center text-xl font-semibold text-foreground">
               Every project is touched by both founders. No middlemen.
             </p>
           </div>
@@ -190,50 +200,99 @@ export default function About() {
       </FadeInSection>
 
       <FadeInSection>
-        <section className="px-6 md:px-12 lg:px-24 py-24 md:py-32 bg-[#f9f9f9]">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl text-[#1a1a1a] mb-12">
-              What Sets Zavabuild Apart
-            </h2>
+        <section className="py-24 bg-background transition-colors duration-300">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-foreground">
+                What Sets Zavabuild Apart
+              </h2>
 
-            <div className="space-y-6">
-              {differentiators.map((point, index) => {
-                const [title, description] = point.split(' - ');
-                return (
-                  <div key={index} className="flex gap-4 items-start border-b border-[#1a1a1a]/10 pb-6">
-                    <CheckCircle className="w-6 h-6 text-[#1a1a1a] mt-1 flex-shrink-0" />
-                    <div className="font-sans text-lg">
-                      <strong className="text-[#1a1a1a]">{title}</strong>
-                      {description && <span className="text-[#1a1a1a]/70"> - {description}</span>}
+              <div className="space-y-6">
+                {differentiators.map((point, index) => {
+                  const [title, description] = point.split(' - ');
+                  return (
+                    <div key={index} className="flex gap-4 items-start">
+                      <CheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="text-lg">
+                          <strong className="text-foreground">{title}</strong>
+                          {description && <span className="text-muted-foreground"> - {description}</span>}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>
       </FadeInSection>
 
       <FadeInSection>
-        <section className="px-6 md:px-12 lg:px-24 py-24 md:py-32 bg-[#1a1a1a] text-[#f9f9f9]">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="font-serif text-4xl md:text-5xl mb-6">
+        <section className="py-24 bg-secondary transition-colors duration-300">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-foreground">
+                Trusted by Growing Businesses
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                We partner with <strong className="text-foreground">startups, scale-ups, e-commerce brands, SaaS companies, and B2B firms</strong> who need more than a website, they need a growth engine.
+              </p>
+              <Card className="bg-background">
+                <CardContent className="pt-6">
+                  <p className="text-lg italic text-muted-foreground mb-4">
+                    "Zavabuild delivered a SaaS dashboard 3x faster than our last agency and it maintains optimized performance at 50K users."
+                  </p>
+                  <p className="font-semibold text-foreground">— CTO, Tech Scale-up</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+      </FadeInSection>
+
+      <FadeInSection>
+        <section className="py-24 bg-background transition-colors duration-300">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-foreground">
+                Our Promise
+              </h2>
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  We won't overpromise. But we will <strong className="text-foreground">over-deliver</strong> on speed, security, and scalability.
+                </p>
+                <p className="text-xl font-semibold text-foreground">
+                  When you choose Zavabuild, you're not buying a website. You're investing in a high-ROI digital asset that compounds with your business.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </FadeInSection>
+
+      <FadeInSection>
+        <section className="py-24 bg-black text-white">
+          <div className="container mx-auto px-4 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Ready to Build Something That Lasts?
             </h2>
-            <p className="font-sans text-lg md:text-xl text-[#f9f9f9]/70 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Let's talk strategy, not just specs.
             </p>
-            <Button
-              size="lg"
-              className="bg-[#f9f9f9] text-[#1a1a1a] hover:bg-[#f9f9f9]/90 px-8 py-6 text-base font-sans"
-              onClick={() => {
-                const event = new CustomEvent('openQuestionnaire');
-                window.dispatchEvent(event);
-              }}
-            >
-              Start Your Project <ArrowRight className="ml-2" />
-            </Button>
-            <p className="font-sans text-sm text-[#f9f9f9]/50 mt-6">
+            <div className="flex justify-center items-center">
+              <Button
+                size="lg"
+                className="bg-white text-black hover:bg-gray-100 text-lg px-8 py-6"
+                onClick={() => {
+                  const event = new CustomEvent('openQuestionnaire');
+                  window.dispatchEvent(event);
+                }}
+              >
+                Start Your Project <ArrowRight className="ml-2" />
+              </Button>
+            </div>
+            <p className="text-sm text-gray-400 mt-6">
               Custom quote in 24 hours • We'll analyze your current site and show exact improvement opportunities
             </p>
           </div>
