@@ -23,7 +23,6 @@ interface QuestionnaireModalProps {
 
 export default function QuestionnaireModal({ open, onOpenChange }: QuestionnaireModalProps) {
   const [submitted, setSubmitted] = useState(false);
-  const [budget, setBudget] = useState([5000]);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -39,7 +38,6 @@ export default function QuestionnaireModal({ open, onOpenChange }: Questionnaire
       description: formData.get('description') as string,
       branding: formData.get('branding') as string,
       timeline: formData.get('timeline') as string,
-      budget: budget[0],
       competitors: formData.get('competitors') as string || null,
       website_references: formData.get('references') as string || null,
       additional: formData.get('additional') as string || null,
@@ -191,22 +189,6 @@ export default function QuestionnaireModal({ open, onOpenChange }: Questionnaire
                 <Label htmlFor="flexible" className="font-sans font-normal text-[#1a1a1a]/80">Flexible (8+ weeks)</Label>
               </div>
             </RadioGroup>
-          </div>
-
-          <div className="space-y-4">
-            <Label className="font-sans text-[#1a1a1a]">Estimated Budget Range: £{budget[0].toLocaleString()}</Label>
-            <Slider
-              min={1500}
-              max={15000}
-              step={500}
-              value={budget}
-              onValueChange={setBudget}
-              className="[&_[role=slider]]:bg-[#1a1a1a] [&_[role=slider]]:border-[#1a1a1a]"
-            />
-            <div className="flex justify-between text-xs text-[#1a1a1a]/60 font-sans">
-              <span>£1,500</span>
-              <span>£15,000+</span>
-            </div>
           </div>
 
           <div className="space-y-2">
